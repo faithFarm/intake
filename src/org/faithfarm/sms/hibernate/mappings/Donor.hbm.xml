@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.Donor" table="donor" catalog="ffarm_prod">
+        <id name="donorId" type="java.lang.Long">
+            <column name="DONOR_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="lastname" type="string">
+            <column name="LASTNAME" length="40" not-null="true" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="FIRSTNAME" length="40" not-null="true" />
+        </property>
+        <property name="suffix" type="string">
+            <column name="SUFFIX" length="4" />
+        </property>
+        <property name="contactPhone" type="string">
+            <column name="CONTACT_PHONE" length="13" not-null="true" />
+        </property>
+        <property name="emailAddress" type="string">
+            <column name="EMAIL_ADDRESS" length="60" not-null="true" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="CREATION_DATE" length="45" />
+        </property>
+        <property name="lastUpdatedDate" type="string">
+            <column name="LAST_UPDATED_DATE" length="45" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="40" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

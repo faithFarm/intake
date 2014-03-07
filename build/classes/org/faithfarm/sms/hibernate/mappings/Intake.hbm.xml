@@ -1,0 +1,625 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 26, 2013 9:21:31 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.Intake" table="intake" catalog="ffarm_prod">
+        <id name="intakeId" type="java.lang.Long">
+            <column name="INTAKE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="lastname" type="string">
+            <column name="LASTNAME" length="30" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="FIRSTNAME" length="30" />
+        </property>
+        <property name="mi" type="string">
+            <column name="MI" length="1" />
+        </property>
+        <property name="suffix" type="string">
+            <column name="SUFFIX" length="5" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="45" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="45" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" length="25" />
+        </property>
+        <property name="zipcode" type="string">
+            <column name="ZIPCODE" length="10" />
+        </property>
+        <property name="dob" type="string">
+            <column name="DOB" length="40" />
+        </property>
+        <property name="ssn" type="string">
+            <column name="SSN" length="60" />
+        </property>
+        <property name="ssnCardFlag" type="string">
+            <column name="SSN_CARD_FLAG" length="1" />
+        </property>
+        <property name="age" type="string">
+            <column name="AGE" length="2" />
+        </property>
+        <property name="height" type="string">
+            <column name="HEIGHT" length="10" />
+        </property>
+        <property name="weight" type="string">
+            <column name="WEIGHT" length="10" />
+        </property>
+        <property name="ethnicity" type="string">
+            <column name="ETHNICITY" length="25" />
+        </property>
+        <property name="hairColor" type="string">
+            <column name="HAIR_COLOR" length="40" />
+        </property>
+        <property name="eyeColor" type="string">
+            <column name="EYE_COLOR" length="20" />
+        </property>
+        <property name="maritalStatus" type="string">
+            <column name="MARITAL_STATUS" length="30" />
+        </property>
+        <property name="educationLevel" type="string">
+            <column name="EDUCATION_LEVEL" length="25" />
+        </property>
+        <property name="graduateFlag" type="string">
+            <column name="GRADUATE_FLAG" length="3" />
+        </property>
+        <property name="transcriptsFlag" type="string">
+            <column name="TRANSCRIPTS_FLAG" length="3" />
+        </property>
+        <property name="englishSpeakingFlag" type="string">
+            <column name="ENGLISH_SPEAKING_FLAG" length="3" />
+        </property>
+        <property name="englishReadingFlag" type="string">
+            <column name="ENGLISH_READING_FLAG" length="3" />
+        </property>
+        <property name="homeLocation" type="string">
+            <column name="HOME_LOCATION" length="45" />
+        </property>
+        <property name="referredBy" type="string">
+            <column name="REFERRED_BY" length="45" />
+        </property>
+        <property name="referredByPhone" type="string">
+            <column name="REFERRED_BY_PHONE" length="45" />
+        </property>
+        <property name="emergencyContact" type="string">
+            <column name="EMERGENCY_CONTACT" length="45" />
+        </property>
+        <property name="emergencyPhone" type="string">
+            <column name="EMERGENCY_PHONE" length="45" />
+        </property>
+        <property name="emergencryRelationship" type="string">
+            <column name="EMERGENCRY_RELATIONSHIP" length="45" />
+        </property>
+        <property name="motherLivingFlag" type="string">
+            <column name="MOTHER_LIVING_FLAG" length="3" />
+        </property>
+        <property name="fatherLivingFlag" type="string">
+            <column name="FATHER_LIVING_FLAG" length="3" />
+        </property>
+        <property name="brothers" type="string">
+            <column name="BROTHERS" length="2" />
+        </property>
+        <property name="sisters" type="string">
+            <column name="SISTERS" length="2" />
+        </property>
+        <property name="children" type="string">
+            <column name="CHILDREN" length="2" />
+        </property>
+        <property name="veteranStatus" type="string">
+            <column name="VETERAN_STATUS" length="25" />
+        </property>
+        <property name="branchOfService" type="string">
+            <column name="BRANCH_OF_SERVICE" length="45" />
+        </property>
+        <property name="rank" type="string">
+            <column name="RANK" length="45" />
+        </property>
+        <property name="lengthOfService" type="string">
+            <column name="LENGTH_OF_SERVICE" length="45" />
+        </property>
+        <property name="dlFlag" type="string">
+            <column name="DL_FLAG" length="45" />
+        </property>
+        <property name="dlNumber" type="string">
+            <column name="DL_NUMBER" length="45" />
+        </property>
+        <property name="dlState" type="string">
+            <column name="DL_STATE" length="45" />
+        </property>
+        <property name="dlExpDate" type="string">
+            <column name="DL_EXP_DATE" length="45" />
+        </property>
+        <property name="stateIdFlag" type="string">
+            <column name="STATE_ID_FLAG" length="3" />
+        </property>
+        <property name="stateIdState" type="string">
+            <column name="STATE_ID_STATE" length="45" />
+        </property>
+        <property name="stateIdExpDate" type="string">
+            <column name="STATE_ID_EXP_DATE" length="45" />
+        </property>
+        <property name="stateIdType" type="string">
+            <column name="STATE_ID_TYPE" length="100" />
+        </property>
+        <property name="governmentBenefitsFlag" type="string">
+            <column name="GOVERNMENT_BENEFITS_FLAG" length="300" />
+        </property>
+        <property name="religion" type="string">
+            <column name="RELIGION" length="45" />
+        </property>
+        <property name="religiousExperience" type="string">
+            <column name="RELIGIOUS_EXPERIENCE" length="16777215" />
+        </property> 
+        <property name="alcoholLastUsed" type="string">
+            <column name="ALCOHOL_LAST_USED" length="15" />
+        </property>
+        <property name="cocaineLastUsed" type="string">
+            <column name="COCAINE_LAST_USED" length="15" />
+        </property>
+        <property name="marijuanaLastUsed" type="string">
+            <column name="MARIJUANA_LAST_USED" length="15" />
+        </property>
+        <property name="oxycodoneLastUsed" type="string">
+            <column name="OXYCODONE_LAST_USED" length="15" />
+        </property>
+        <property name="speedLastUsed" type="string">
+            <column name="SPEED_LAST_USED" length="15" />
+        </property>
+        <property name="heroinLastUsed" type="string">
+            <column name="HEROIN_LAST_USED" length="15" />
+        </property>
+        <property name="xanaxLastUsed" type="string">
+            <column name="XANAX_LAST_USED" length="15" />
+        </property>
+        <property name="otherLastUsed" type="string">
+            <column name="OTHER_LAST_USED" length="15" />
+        </property>
+        <property name="alcoholYearsUsed" type="string">
+            <column name="ALCOHOL_YEARS_USED" length="15" />
+        </property>
+        <property name="cocaineYearsUsed" type="string">
+            <column name="COCAINE_YEARS_USED" length="15" />
+        </property>
+        <property name="marijuanaYearsUsed" type="string">
+            <column name="MARIJUANA_YEARS_USED" length="15" />
+        </property>
+        <property name="oxycodoneYearsUsed" type="string">
+            <column name="OXYCODONE_YEARS_USED" length="15" />
+        </property>
+        <property name="speedYearsUsed" type="string">
+            <column name="SPEED_YEARS_USED" length="15" />
+        </property>
+        <property name="heroinYearsUsed" type="string">
+            <column name="HEROIN_YEARS_USED" length="15" />
+        </property>
+        <property name="xanaxYearsUsed" type="string">
+            <column name="XANAX_YEARS_USED" length="15" />
+        </property>
+        <property name="otherYearsUsed" type="string">
+            <column name="OTHER_YEARS_USED" length="15" />
+        </property>
+        <property name="sober1Year" type="string">
+            <column name="SOBER_1_YEAR" length="15" />
+        </property>
+        <property name="sober3Years" type="string">
+            <column name="SOBER_3_YEARS" length="15" />
+        </property>
+        <property name="usagePattern" type="string">
+            <column name="USAGE_PATTERN" length="300" />
+        </property>
+        <property name="quantityPerWeek" type="string">
+            <column name="QUANTITY_PER_WEEK" length="45" />
+        </property>
+        <property name="quantity2Years" type="string">
+            <column name="QUANTITY_2_YEARS" length="45" />
+        </property>
+        <property name="usageLosses" type="string">
+            <column name="USAGE_LOSSES" length="300" />
+        </property>
+        <property name="physicalEffects" type="string">
+            <column name="PHYSICAL_EFFECTS" length="300" />
+        </property>
+        <property name="aaFlag" type="string">
+            <column name="AA_FLAG" length="45" />
+        </property>
+        <property name="naFlag" type="string">
+            <column name="NA_FLAG" length="45" />
+        </property>
+        <property name="prevFfFlag" type="string">
+            <column name="PREV_FF_FLAG" length="3" />
+        </property>
+        <property name="prevFfYear" type="string">
+            <column name="PREV_FF_YEAR" length="45" />
+        </property>
+        <property name="prevFfOther" type="string">
+            <column name="PREV_FF_OTHER" length="45" />
+        </property>
+        <property name="currentHealth" type="string">
+            <column name="CURRENT_HEALTH" length="45" />
+        </property>
+        <property name="medicationFlag" type="string">
+            <column name="MEDICATION_FLAG" length="3" />
+        </property>
+        <property name="medicationSupplyFlag" type="string">
+            <column name="MEDICATION_SUPPLY_FLAG" length="3" />
+        </property>
+        <property name="medicationNeedFlag" type="string">
+            <column name="MEDICATION_NEED_FLAG" length="3" />
+        </property>
+        <property name="medicationDetails" type="string">
+            <column name="MEDICATION_DETAILS" length="45" />
+        </property>
+        <property name="medicationRefillDetails" type="string">
+            <column name="MEDICATION_REFILL_DETAILS" length="45" />
+        </property>
+        <property name="doctorApptFlag" type="string">
+            <column name="DOCTOR_APPT_FLAG" length="3" />
+        </property>
+        <property name="doctorApptDetails" type="string">
+            <column name="DOCTOR_APPT_DETAILS" length="45" />
+        </property>
+        <property name="eyewearFlag" type="string">
+            <column name="EYEWEAR_FLAG" length="3" />
+        </property>
+        <property name="eyewearUsage" type="string">
+            <column name="EYEWEAR_USAGE" length="45" />
+        </property>
+        <property name="homelessTime" type="string">
+            <column name="HOMELESS_TIME" length="300" />
+        </property>
+        <property name="homelessReason" type="string">
+            <column name="HOMELESS_REASON" length="300" />
+        </property>
+        <property name="homelessHowOften" type="string">
+            <column name="HOMELESS_HOW_OFTEN" length="300" />
+        </property>
+        <property name="industrialInjuryFlag" type="string">
+            <column name="INDUSTRIAL_INJURY_FLAG" length="3" />
+        </property>
+        <property name="industrialInjuryDate" type="string">
+            <column name="INDUSTRIAL_INJURY_DATE" length="45" />
+        </property>
+        <property name="industrialInjuryReason" type="string">
+            <column name="INDUSTRIAL_INJURY_REASON" length="45" />
+        </property>
+        <property name="industrialInjuryLocation" type="string">
+            <column name="INDUSTRIAL_INJURY_LOCATION" length="45" />
+        </property>
+        <property name="industrialInjuryEmployer" type="string">
+            <column name="INDUSTRIAL_INJURY_EMPLOYER" length="45" />
+        </property>
+        <property name="industrialInjuryClaimStatus" type="string">
+            <column name="INDUSTRIAL_INJURY_CLAIM_STATUS" length="45" />
+        </property>
+        <property name="disabilityFlag" type="string">
+            <column name="DISABILITY_FLAG" length="3" />
+        </property>
+        <property name="disabilityDetails" type="string">
+            <column name="DISABILITY_DETAILS" length="45" />
+        </property>
+        <property name="disabilityExaminationDate" type="string">
+            <column name="DISABILITY_EXAMINATION_DATE" length="45" />
+        </property>
+        <property name="disabilityPhysician" type="string">
+            <column name="DISABILITY_PHYSICIAN" length="45" />
+        </property>
+        <property name="disabilityPhysicianAddress" type="string">
+            <column name="DISABILITY_PHYSICIAN_ADDRESS" length="45" />
+        </property>
+        <property name="herniaSide" type="string">
+            <column name="HERNIA_SIDE" length="45" />
+        </property>
+        <property name="herniaOperationFlag" type="string">
+            <column name="HERNIA_OPERATION_FLAG" length="3" />
+        </property>
+        <property name="herniaDetails" type="string">
+            <column name="HERNIA_DETAILS" length="45" />
+        </property>
+        <property name="lawsuitFlag" type="string">
+            <column name="LAWSUIT_FLAG" length="45" />
+        </property>
+        <property name="currentLawsuitFlag" type="string">
+            <column name="CURRENT_LAWSUIT_FLAG" length="3" />
+        </property>
+        <property name="lawsuitDetails" type="string">
+            <column name="LAWSUIT_DETAILS" length="16777215" />
+        </property>
+        <property name="currentLawsuitDetails" type="string">
+            <column name="CURRENT_LAWSUIT_DETAILS" length="16777215" />
+        </property>
+        <property name="felonyFlag" type="string">
+            <column name="FELONY_FLAG" length="45" />
+        </property>
+        <property name="sexualOffenseFlag" type="string">
+            <column name="SEXUAL_OFFENSE_FLAG" length="3" />
+        </property>
+        <property name="felonyDetails" type="string">
+            <column name="FELONY_DETAILS" length="16777215" />
+        </property>
+        <property name="sexualOffenseQty" type="string">
+            <column name="SEXUAL_OFFENSE_QTY" length="2" />
+        </property>
+        <property name="sexualOffenseDetails" type="string">
+            <column name="SEXUAL_OFFENSE_DETAILS" length="16777215" />
+        </property>
+        <property name="caseNotes" type="string">
+            <column name="CASE_NOTES" length="16777215" />
+        </property>
+        <property name="responseStatus" type="string">
+            <column name="RESPONSE_STATUS" length="16777215" />
+        </property>
+        <property name="probationFlag" type="string">
+            <column name="PROBATION_FLAG" length="3" />
+        </property>
+        <property name="probationCounty" type="string">
+            <column name="PROBATION_COUNTY" length="45" />
+        </property>
+        <property name="probationOfficer" type="string">
+            <column name="PROBATION_OFFICER" length="45" />
+        </property>
+        <property name="probationOfficerPhone" type="string">
+            <column name="PROBATION_OFFICER_PHONE" length="45" />
+        </property>
+        <property name="probationApptFlag" type="string">
+            <column name="PROBATION_APPT_FLAG" length="3" />
+        </property>
+        <property name="probationApptDetails" type="string">
+            <column name="PROBATION_APPT_DETAILS" length="16777215" />
+        </property>
+        <property name="incomeAmount" type="string">
+            <column name="INCOME_AMOUNT" length="45" />
+        </property>
+        <property name="incomeSource" type="string">
+            <column name="INCOME_SOURCE" length="45" />
+        </property>
+        <property name="incomeWeeklyFlag" type="string">
+            <column name="INCOME_WEEKLY_FLAG" length="3" />
+        </property>
+        <property name="incomeMonthlyFlag" type="string">
+            <column name="INCOME_MONTHLY_FLAG" length="3" />
+        </property>
+        <property name="applicationStatus" type="string">
+            <column name="APPLICATION_STATUS" length="45" />
+        </property>
+        <property name="applicationSignature" type="string">
+            <column name="APPLICATION_SIGNATURE" length="45" />
+        </property>
+        <property name="intakeCounselorSignature" type="string">
+            <column name="INTAKE_COUNSELOR_SIGNATURE" length="45" />
+        </property>
+        <property name="directorSignature" type="string">
+            <column name="DIRECTOR_SIGNATURE" length="45" />
+        </property>
+        <property name="applicationSignDate" type="string">
+            <column name="APPLICATION_SIGN_DATE" length="45" />
+        </property>
+        <property name="intakeCounselorSignDate" type="string">
+            <column name="INTAKE_COUNSELOR_SIGN_DATE" length="45" />
+        </property>
+        <property name="directorSignDate" type="string">
+            <column name="DIRECTOR_SIGN_DATE" length="45" />
+        </property>
+        <property name="cellDisclosureConsent" type="string">
+            <column name="CELL_DISCLOSURE_CONSENT" length="45" />
+        </property>
+        <property name="releaseWaiverConsent" type="string">
+            <column name="RELEASE_WAIVER_CONSENT" length="45" />
+        </property>
+        <property name="biblicalCounselingConsent" type="string">
+            <column name="BIBLICAL_COUNSELING_CONSENT" length="45" />
+        </property>
+        <property name="entryAgreementConsent" type="string">
+            <column name="ENTRY_AGREEMENT_CONSENT" length="45" />
+        </property>
+        <property name="rulesVisitationConsent" type="string">
+            <column name="RULES_VISITATION_CONSENT" length="45" />
+        </property>
+        <property name="releaseInformationConsent" type="string">
+            <column name="RELEASE_INFORMATION_CONSENT" length="45" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="CREATION_DATE" length="45" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="45" />
+        </property>
+        <property name="lastUpdatedDate" type="string">
+            <column name="LAST_UPDATED_DATE" length="45" />
+        </property>
+        <property name="lastUpdatedBy" type="string">
+            <column name="LAST_UPDATED_BY" length="45" />
+        </property>
+        <property name="submissionDate" type="string">
+            <column name="SUBMISSION_DATE" length="45" />
+        </property>
+        <property name="entryDate" type="string">
+            <column name="ENTRY_DATE" length="45" />
+        </property>
+        <property name="intakeStatus" type="string">
+            <column name="INTAKE_STATUS" length="25" />
+        </property>
+        <property name="imageHeadshot" type="binary">
+            <column name="IMAGE_HEADSHOT" />
+        </property>
+        <property name="imageStateId" type="binary">
+            <column name="IMAGE_STATE_ID" />
+        </property>
+        <property name="imageSsn" type="binary">
+            <column name="IMAGE_SSN" />
+        </property>
+        <property name="probationState" type="string">
+            <column name="PROBATION_STATE" length="45" />
+        </property>
+        <property name="relationshipWithMother" type="string">
+            <column name="RELATIONSHIP_WITH_MOTHER" length="45" />
+        </property>
+        <property name="relationshipWithFather" type="string">
+            <column name="RELATIONSHIP_WITH_FATHER" length="45" />
+        </property>
+        <property name="medicalConditionDetails" type="string">
+            <column name="MEDICAL_CONDITION_DETAILS" length="60" />
+        </property>
+        <property name="herniaDate" type="string">
+            <column name="HERNIA_DATE" length="45" />
+        </property>
+        <property name="otherJobSkill" type="string">
+            <column name="OTHER_JOB_SKILL" length="45" />
+        </property>
+        <property name="farmBase" type="string">
+            <column name="FARM_BASE" length="45" />
+        </property>
+        <property name="exitDate" type="string">
+            <column name="EXIT_DATE" length="45" />
+        </property>
+        <property name="supervisor" type="string">
+            <column name="SUPERVISOR" length="45" />
+        </property>
+        <property name="job" type="string">
+            <column name="JOB" length="45" />
+        </property>
+        <property name="class_" type="string">
+            <column name="CLASS" length="45" />
+        </property>
+        <property name="area" type="string">
+            <column name="AREA" length="45" />
+        </property>
+        <property name="room" type="string">
+            <column name="ROOM" length="45" />
+        </property>
+        <property name="bed" type="string">
+            <column name="BED" length="45" />
+        </property>
+        <property name="archivedFlag" type="string">
+            <column name="ARCHIVED_FLAG" length="3" />
+        </property>
+        <property name="departmentId" type="java.lang.Long">
+            <column name="DEPARTMENT_ID" />
+        </property>
+        <property name="supervisorId" type="java.lang.Long">
+            <column name="SUPERVISOR_ID" />
+        </property>
+        <property name="jobId" type="java.lang.Long">
+            <column name="JOB_ID" />
+        </property>
+        <property name="otherBenefits" type="string">
+            <column name="other_benefits" length="100" />
+        </property>
+        <property name="aaYears" type="string">
+            <column name="aa_years" length="20" />
+        </property>
+        <property name="lawsuitDate" type="string">
+            <column name="LAWSUIT_DATE" length="20" />
+        </property>
+        <property name="currentLawsuitDate" type="string">
+            <column name="CURRENT_LAWSUIT_DATE" length="20" />
+        </property>
+        <property name="felonyQty" type="java.lang.Integer">
+            <column name="FELONY_QTY" />
+        </property>
+        <property name="needMedicationFlag" type="string">
+            <column name="NEED_MEDICATION_FLAG" length="45" />
+        </property>
+        <property name="employer1Name" type="string">
+            <column name="EMPLOYER1_NAME" length="60" />
+        </property>
+        <property name="employer2Name" type="string">
+            <column name="EMPLOYER2_NAME" length="60" />
+        </property>
+        <property name="employer3Name" type="string">
+            <column name="EMPLOYER3_NAME" length="60" />
+        </property>
+        <property name="employer1Dates" type="string">
+            <column name="EMPLOYER1_DATES" length="20" />
+        </property>
+        <property name="employer2Dates" type="string">
+            <column name="EMPLOYER2_DATES" length="20" />
+        </property>
+        <property name="employer3Dates" type="string">
+            <column name="EMPLOYER3_DATES" length="20" />
+        </property>
+        <property name="employer4Dates" type="string">
+            <column name="EMPLOYER4_DATES" length="20" />
+        </property>
+        <property name="employer1Contact" type="string">
+            <column name="EMPLOYER1_CONTACT" length="60" />
+        </property>
+        <property name="employer2Contact" type="string">
+            <column name="EMPLOYER2_CONTACT" length="60" />
+        </property>
+        <property name="employer3Contact" type="string">
+            <column name="EMPLOYER3_CONTACT" length="60" />
+        </property>
+        <property name="employer4Contact" type="string">
+            <column name="EMPLOYER4_CONTACT" length="60" />
+        </property>
+        <property name="employer1Phone" type="string">
+            <column name="EMPLOYER1_PHONE" length="20" />
+        </property>
+        <property name="employer2Phone" type="string">
+            <column name="EMPLOYER2_PHONE" length="20" />
+        </property>
+        <property name="employer3Phone" type="string">
+            <column name="EMPLOYER3_PHONE" length="20" />
+        </property>
+        <property name="employer4Phone" type="string">
+            <column name="EMPLOYER4_PHONE" length="20" />
+        </property>
+        <property name="employer1Job" type="string">
+            <column name="EMPLOYER1_JOB" length="60" />
+        </property>
+        <property name="employer2Job" type="string">
+            <column name="EMPLOYER2_JOB" length="60" />
+        </property>
+        <property name="employer3Job" type="string">
+            <column name="EMPLOYER3_JOB" length="60" />
+        </property>
+        <property name="employer4Job" type="string">
+            <column name="EMPLOYER4_JOB" length="60" />
+        </property>
+        <property name="employer4Name" type="string">
+            <column name="EMPLOYER4_NAME" length="60" />
+        </property>
+        <property name="ssFlag" type="string">
+            <column name="SS_FLAG" length="20" />
+        </property>
+        <property name="vaFlag" type="string">
+            <column name="VA_FLAG" length="20" />
+        </property>
+        <property name="wcFlag" type="string">
+            <column name="WC_FLAG" length="20" />
+        </property>
+        <property name="foodStampFlag" type="string">
+            <column name="FOOD_STAMP_FLAG" length="20" />
+        </property>
+        <property name="needGed" type="string">
+            <column name="NEED_GED" length="20" />
+        </property>
+        <property name="spiritualExperience" type="string">
+            <column name="SPIRITUAL_EXPERIENCE" length="80" />
+        </property>
+        <property name="emailAddress" type="string">
+            <column name="EMAIL_ADDRESS" length="80" />
+        </property>
+        <property name="applicationSubmissionDate" type="string">
+            <column name="APPLICATION_SUBMISSION_DATE" length="20" />
+        </property>
+        <property name="reapplyFlag" type="string">
+            <column name="REAPPLY_FLAG" length="20" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="20" />
+        </property>
+        <property name="cwtProgramId" not-null="true" >
+            <column name="cwt_program_id"  />
+        </property>
+        <property name="arrivalDate" type="string">
+            <column name="ARRIVAL_DATE" length="20" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

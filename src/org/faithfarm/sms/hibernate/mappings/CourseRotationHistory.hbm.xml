@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.CourseRotationHistory" table="course_rotation_history" catalog="ffarm_prod">
+        <id name="courseRotationId" type="java.lang.Long">
+            <column name="COURSE_ROTATION_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="rotationDate" type="string">
+            <column name="ROTATION_DATE" length="45" />
+        </property>
+        <property name="movedCourse0To1" type="java.lang.Integer">
+            <column name="MOVED_COURSE_0_TO_1" />
+        </property>
+        <property name="movedCourse1To2" type="java.lang.Integer">
+            <column name="MOVED_COURSE_1_TO_2" />
+        </property>
+        <property name="movedCourse2To3" type="java.lang.Integer">
+            <column name="MOVED_COURSE_2_TO_3" />
+        </property>
+        <property name="movedCourse3To4" type="java.lang.Integer">
+            <column name="MOVED_COURSE_3_TO_4" />
+        </property>
+        <property name="movedCourse4To5" type="java.lang.Integer">
+            <column name="MOVED_COURSE_4_TO_5" />
+        </property>
+        <property name="movedCourse5To6" type="java.lang.Integer">
+            <column name="MOVED_COURSE_5_TO_6" />
+        </property>
+        <property name="heldCourse0" type="java.lang.Integer">
+            <column name="HELD_COURSE_0" />
+        </property>
+        <property name="heldCourse1" type="java.lang.Integer">
+            <column name="HELD_COURSE_1" />
+        </property>
+        <property name="heldCourse2" type="java.lang.Integer">
+            <column name="HELD_COURSE_2" />
+        </property>
+        <property name="heldCourse3" type="java.lang.Integer">
+            <column name="HELD_COURSE_3" />
+        </property>
+        <property name="heldCourse4" type="java.lang.Integer">
+            <column name="HELD_COURSE_4" />
+        </property>
+        <property name="heldCourse5" type="java.lang.Integer">
+            <column name="HELD_COURSE_5" />
+        </property>
+        <property name="heldCourse6" type="java.lang.Integer">
+            <column name="HELD_COURSE_6" />
+        </property>
+        <property name="graduated" type="java.lang.Integer">
+            <column name="GRADUATED" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="45" />
+        </property>
+        <property name="farmBase" type="string">
+            <column name="FARM_BASE" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

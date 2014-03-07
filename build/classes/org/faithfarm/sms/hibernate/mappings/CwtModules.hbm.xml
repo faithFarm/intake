@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 23, 2013 2:58:32 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.CwtModules" table="cwt_modules" catalog="ffarm_prod">
+        <id name="moduleId" type="java.lang.Long">
+            <column name="module_id" />
+            <generator class="identity" />
+        </id>
+        <property name="moduleName" type="string">
+            <column name="module_name" length="50" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="10" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="creation_date" length="20" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" length="20" />
+        </property>
+        <property name="meetingDays" type="string">
+            <column name="meeting_days" length="45" />
+        </property>
+        <property name="meetingTimes" type="string">
+            <column name="meeting_times" length="45" />
+        </property>
+        <property name="instructorId" type="java.lang.Long">
+            <column name="instructor_id" />
+        </property>
+        <property name="meetingLocation" type="string">
+            <column name="meeting_location" length="45" />
+        </property>
+        <property name="programId" type="java.lang.Long">
+            <column name="program_id" />
+        </property>
+        <property name="moduleSeq" type="string">
+            <column name="module_sequence" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

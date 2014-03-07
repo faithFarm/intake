@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 30, 2013 1:04:20 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.CwtRoster" table="cwt_roster" catalog="ffarm_prod">
+        <id name="rosterId" type="java.lang.Long">
+            <column name="roster_id" />
+            <generator class="identity" />
+        </id>
+        <property name="moduleId" type="long">
+            <column name="module_id" not-null="true" />
+        </property>
+        <property name="sectionId" type="long">
+            <column name="section_id" not-null="true" />
+        </property>
+        <property name="intakeId" type="long">
+            <column name="intake_id" not-null="true" />
+        </property>
+        <property name="attendFlag" type="string">
+            <column name="attend_flag" length="15" />
+        </property>
+        <property name="examScore" type="string">
+            <column name="exam_score" length="5" />
+        </property>
+        <property name="lastUpdatedBy" type="string">
+            <column name="last_updated_by" length="20" />
+        </property>
+        <property name="lastUpdatedDate" type="string">
+            <column name="last_updated_date" length="20" />
+        </property>
+        <property name="attendDate" type="string">
+            <column name="attend_date" length="20" />
+        </property>
+        <property name="examDate" type="string">
+            <column name="exam_date" length="20" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="20" />
+        </property>
+        <property name="jobId" type="java.lang.Long">
+            <column name="job_id" />
+        </property>
+        <property name="departmentId" type="java.lang.Long">
+            <column name="department_id" />
+        </property>
+        <property name="supervisorId" type="java.lang.Long">
+            <column name="supervisor_id" />
+        </property>
+        <property name="archivedFlag" type="string">
+            <column name="archived_flag" length="15" />
+        </property>
+        <property name="rosterDate" type="string">
+            <column name="roster_date" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

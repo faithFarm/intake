@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.Course" table="course" catalog="ffarm_prod">
+        <id name="courseId" type="java.lang.Long">
+            <column name="COURSE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="title" type="string">
+            <column name="TITLE" length="25" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="200" />
+        </property>
+        <property name="beginDate" type="string">
+            <column name="BEGIN_DATE" length="10" />
+        </property>
+        <property name="endDate" type="string">
+            <column name="END_DATE" length="10" />
+        </property>
+        <property name="beginTime" type="string">
+            <column name="BEGIN_TIME" length="10" />
+        </property>
+        <property name="endTime" type="string">
+            <column name="END_TIME" length="10" />
+        </property>
+        <property name="meetingDays" type="string">
+            <column name="MEETING_DAYS" length="7" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="CREATION_DATE" length="45" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

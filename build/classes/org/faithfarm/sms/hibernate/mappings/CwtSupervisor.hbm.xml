@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.CwtSupervisor" table="cwt_supervisor" catalog="ffarm_prod">
+        <id name="supervisorId" type="java.lang.Long">
+            <column name="supervisor_id" />
+            <generator class="identity" />
+        </id>
+        <property name="firstname" type="string">
+            <column name="firstname" length="45" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="lastname" length="45" />
+        </property>
+        <property name="jobId" type="java.lang.Long">
+            <column name="job_id" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="creation_date" length="45" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" length="45" />
+        </property>
+        <property name="departmentId" type="java.lang.Long">
+            <column name="department_id" />
+        </property>
+        <property name="farmBase" type="string">
+            <column name="farm_base" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

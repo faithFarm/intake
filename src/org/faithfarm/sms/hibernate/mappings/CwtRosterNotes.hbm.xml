@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.CwtRosterNotes" table="cwt_roster_notes" catalog="ffarm_prod">
+        <id name="notesId" type="java.lang.Long">
+            <column name="NOTES_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="sectionId" not-null="true" >
+            <column name="section_id"  />
+        </property>
+        <property name="rosterDate" type="string">
+            <column name="ROSTER_DATE" length="20" />
+        </property>
+        <property name="notes" type="string">
+            <column name="notes" length="16777215" />
+        </property>      
+    </class>
+</hibernate-mapping>

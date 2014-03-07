@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 28, 2013 1:04:43 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.CwtModuleSection" table="cwt_module_section" catalog="ffarm_prod">
+        <id name="moduleOfferingId" type="java.lang.Long">
+            <column name="module_offering_id" />
+            <generator class="identity" />
+        </id>
+        <property name="moduleId" type="java.lang.Long">
+            <column name="module_id" />
+        </property>
+        <property name="meetingDays" type="string">
+            <column name="meeting_days" length="10" />
+        </property>
+        <property name="meetingTimes" type="string">
+            <column name="meeting_times" length="10" />
+        </property>
+        <property name="creditHours" type="string">
+            <column name="credit_hours" length="3" />
+        </property>
+        <property name="instructorId" type="java.lang.Long">
+            <column name="instructor_id" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="10" />
+        </property>
+        <property name="effectiveDate" type="string">
+            <column name="effective_date" length="20" />
+        </property>
+        <property name="expirationDate" type="string">
+            <column name="expiration_date" length="20" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="60" />
+        </property>
+        <property name="farmBase" type="string">
+            <column name="farm_base" length="50" />
+        </property>
+        <property name="instructorNotes" type="string">
+            <column name="instructor_notes" length="2147483647" />
+        </property>
+        <property name="administratorId" type="java.lang.Long">
+            <column name="administrator_id" />
+        </property>
+ 
+    </class>
+</hibernate-mapping>

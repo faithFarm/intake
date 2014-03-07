@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2013 3:14:58 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.UserAuthorizedSession" table="user_authorized_session" catalog="ffarm_prod">
+        <id name="sessionId" type="string">
+            <column name="SESSION_ID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="java.lang.Long">
+            <column name="USER_ID" />
+        </property>
+        <property name="loginTime" type="string">
+            <column name="LOGIN_TIME" length="20" />
+        </property>
+        <property name="active" type="string">
+            <column name="ACTIVE" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

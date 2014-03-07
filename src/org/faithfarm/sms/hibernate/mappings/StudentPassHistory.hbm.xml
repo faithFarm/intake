@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.StudentPassHistory" table="student_pass_history" catalog="ffarm_prod">
+        <id name="studentPassHistoryId" type="java.lang.Long">
+            <column name="student_pass_history_id" />
+            <generator class="identity" />
+        </id>
+        <property name="intakeId" type="java.lang.Long">
+            <column name="intake_id" />
+        </property>
+        <property name="hours" type="string">
+            <column name="hours" length="45" />
+        </property>
+        <property name="passDate" type="string">
+            <column name="pass_date" length="45" />
+        </property>
+        <property name="passType" type="string">
+            <column name="pass_type" length="45" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="creation_date" length="45" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" length="45" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="60" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.Address$" table="address$" catalog="ffarm_prod">
+        <composite-id name="id" class="org.faithfarm.sms.domain.Address$Id">
+            <key-property name="building" type="string">
+                <column name="building" />
+            </key-property>
+            <key-property name="cellPhone" type="string">
+                <column name="cellPhone" />
+            </key-property>
+            <key-property name="structureType" type="string">
+                <column name="structureType" />
+            </key-property>
+            <key-property name="subdivision" type="string">
+                <column name="subdivision" />
+            </key-property>
+            <key-property name="gateInstructions" type="string">
+                <column name="gateInstructions" />
+            </key-property>
+            <key-property name="apartmentNumber" type="string">
+                <column name="apartmentNumber" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="city" />
+            </key-property>
+            <key-property name="streetSuffix" type="string">
+                <column name="streetSuffix" />
+            </key-property>
+            <key-property name="floorNumber" type="string">
+                <column name="floorNumber" />
+            </key-property>
+            <key-property name="zipcode" type="java.lang.Double">
+                <column name="zipcode" precision="22" scale="0" />
+            </key-property>
+            <key-property name="buildingNumber" type="string">
+                <column name="buildingNumber" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+            <key-property name="addressLine2" type="string">
+                <column name="addressLine2" />
+            </key-property>
+            <key-property name="workPhone" type="string">
+                <column name="workPhone" />
+            </key-property>
+            <key-property name="addressId" type="java.lang.Double">
+                <column name="address_id" precision="22" scale="0" />
+            </key-property>
+            <key-property name="addressLine1" type="string">
+                <column name="addressLine1" />
+            </key-property>
+            <key-property name="elevatorFlag" type="string">
+                <column name="elevatorFlag" />
+            </key-property>
+            <key-property name="majorIntersection" type="string">
+                <column name="majorIntersection" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" />
+            </key-property>
+            <key-property name="homePhone" type="string">
+                <column name="homePhone" />
+            </key-property>
+            <key-property name="gatedCommunity" type="string">
+                <column name="gatedCommunity" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

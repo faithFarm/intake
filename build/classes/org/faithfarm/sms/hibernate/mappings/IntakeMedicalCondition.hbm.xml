@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.IntakeMedicalCondition" table="intake_medical_condition" catalog="ffarm_prod">
+        <id name="intakeMedicalConditionId" type="java.lang.Long">
+            <column name="INTAKE_MEDICAL_CONDITION_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="intakeId" type="long">
+            <column name="INTAKE_ID" not-null="true" />
+        </property>
+        <property name="answer" type="string">
+            <column name="ANSWER" length="3" not-null="true" />
+        </property>
+        <property name="medicalConditionId" type="java.lang.Long">
+            <column name="MEDICAL_CONDITION_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

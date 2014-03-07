@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.CwtCertificationStudentExam" table="cwt_certification_student_exam" catalog="ffarm_prod">
+        <id name="certificationExamId" type="java.lang.Long">
+            <column name="certification_exam_id" />
+            <generator class="identity" />
+        </id>
+        <property name="programId" type="long">
+            <column name="program_id" not-null="true" />
+        </property>
+        <property name="examDate" type="string">
+            <column name="exam_date" length="20" />
+        </property>
+        <property name="grade" type="string">
+            <column name="grade" length="10" />
+        </property>
+        <property name="intakeId" type="long">
+            <column name="intake_id" not-null="true" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="creation_date" length="20" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

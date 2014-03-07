@@ -1,0 +1,870 @@
+/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    background: #b6b7bc;
+    font-size: .70em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 1160px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+.success {
+	font: bold 12px Arial;
+	color: #37943e;
+	text-align: left;
+	padding-left: 0px;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color:#3a4f63;
+    width:100%;
+	padding-top:16px;
+	padding-bottom:1px;
+	padding-left:0px;
+}
+
+
+
+div.menu ul
+{
+    list-style:none;
+	margin:0;
+    width:auto;
+	display: inline; 
+}
+
+div.menu ul li
+{
+    padding-left: 0px;
+	display: inline; 
+	
+}
+
+
+div.studentSearch {
+	background:#fcfcfc;
+	height:380px;
+	width:400px;	
+	border-top:1px solid #a5b3c5;
+	border-bottom:1px solid #a5b3c5;
+	border-left:1px solid #a5b3c5;
+	border-right:1px solid #a5b3c5;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	font: 12px Verdana;
+	color: #000000;
+	text-align:left; 
+}
+
+div.applicationSearch {
+	background:#fcfcfc;
+	height:460px;
+	width:400px;	
+	border-top:1px solid #a5b3c5;
+	border-bottom:1px solid #a5b3c5;
+	border-left:1px solid #a5b3c5;
+	border-right:1px solid #a5b3c5;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	font: 12px Verdana;
+	color: #000000;
+	text-align:left; 
+}
+
+/* CSS below targets the drop down menu on the last menu item*/
+/*Begin*/
+
+/*End CSS for DropDown*/
+
+
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    line-height: 2.8em;
+    padding: 4px 18px;
+    text-decoration: none;
+	
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+	
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+	
+}
+
+
+
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;font-size:
+
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset.login error {
+	font-size:12px;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+
+
+input.submitButton
+{
+    float: right;
+    margin: 0px 10px 0px 0px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 55%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+p.error {
+	font: bold 11px Arial;
+	color: #b71524;
+	text-align:left; 
+}
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+div.aspNetHidden
+{
+    display:none;
+}
+ 
+a:link.student_qi_label, a:visited.student_qi_label 
+{
+    color: Lime;
+}
+
+
+
+.student_qi_label, /* student quickinfo labels*/
+.student_ssn,
+.student_name,
+.student_dateofentered
+{
+    color:Silver;        
+    padding-left:2px;
+}
+
+.student_qi_label
+{
+    padding-left:10px;
+    font-weight:bold;
+    color:White;
+}
+
+.PersonalData .Address_value,
+.PersonalData .Address2_value
+{
+    width: 206px;
+}
+
+.PersonalData .ZipCode
+{
+    padding-left: 10px;
+}
+
+.PersonalData .State
+{
+    text-align: right;    
+}
+
+.SubstanceData .Subtance_YearsUsed,
+.SubstanceData .Subtance_DateLastUsed,
+.SubstanceData .AA_Years,
+.SubstanceData .FFarm_YearOfAttendance,
+.SubstanceData .OtherFamilyMembers
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.HealthData .SectionLabel
+{
+    font-weight:bold;
+}
+
+.HealthData .TableIntendAdjuster
+{
+    /*
+    background-color:Red;
+    height:10px;
+    */
+    width:336px;
+}
+
+.PersonalData .label,
+.ReligiousData .label,
+.SubstanceData .label,
+.HealthData .label,
+.LegalData .label,
+.EmploymentData .label,  
+.StatusData .label
+{
+    color:Blue;
+}
+
+.EmploymentData .datetime
+{    
+    
+}
+
+
+.EmploymentHistoryData .Start_DateLabel
+{        
+    width:110px;
+}
+
+.EmploymentHistoryData .Start_DateLabel div
+{
+    padding-left: 10px;
+}
+
+.EmploymentHistoryData .End_DateLabel
+{
+    width:110px;
+}
+
+.EmploymentHistoryData .End_DateLabel div
+{
+    padding-left: 15px;
+}
+
+.EmploymentHistoryData .EmployerLabel
+{
+    width:215px;
+}
+
+.EmploymentHistoryData .Job_TitleLabel
+{
+   
+    width:215px;
+}
+
+.EmploymentHistoryData .Job_TitleLabel div
+{
+    padding-left:5px;
+}
+
+.EmploymentHistoryData .DutiesLabel
+{    
+    width:220px;
+}
+
+.EmploymentHistoryData .DutiesLabel div
+{   
+    padding-left: 5px;    
+}
+
+.StatusData .CurrentProgramDataGrid 
+{
+    border-left: 1 solid red;
+    border-style: solid;
+    border-width: thin;
+}
+
+.StatusData .CurrentProgramData .Blank_Header, .StatusData .UpdateStatus .Blank_Header
+{
+    width: 55px;
+
+}
+
+.StatusData .CurrentProgramData .Location_Header
+{
+    width:115px;
+    text-align:left;
+}
+
+.StatusData .CurrentProgramData .Program_Header
+{
+    text-align:left;
+    width:105px;
+}
+
+.StatusData .CurrentProgramData .Control_Header
+{
+    text-align:left;
+    width:25px;
+}
+
+.StatusData .CurrentProgramData .Reason_Header
+{
+    text-align:left;
+    width:140px;
+}
+
+.StatusData .CurrentProgramData .Status_Header
+{
+    width: 70px;
+    text-align:left;
+
+}
+
+.StatusData .UpdateStatus .Location
+{
+    text-align:left;
+    width: 110px;  
+
+}
+
+.StatusData .UpdateStatus .Program
+{
+    width:115px;
+}
+
+.StatusData .UpdateStatus .ProgramStatus
+{
+    text-align:left;
+    width: 225px;  
+
+}
+
+.StatusData .UpdateStatus .DateBegan_Header
+{
+    text-align:left;
+    width: 100px;  
+}
+
+.StatusData .CurrentProgramData .DateBegan_Header
+{
+    text-align:left;
+    width: 95px;    
+}
+
+.StatusData .CurrentProgramData .DateEnded_Header
+{
+    text-align:left;
+    width: 70px;
+}
+
+.HistoryRow td div
+{
+    text-align:left;
+}
+
+.HistoryRow .DelButton
+{
+    text-align:center;
+}
+
+
+table {
+}
+.searchResults {
+	border-left:1px solid #768ca5;
+	border-right:1px solid #768ca5;
+	border-top:1px solid #768ca5;
+	border-bottom:1px solid #768ca5;
+}
+
+
+td {
+}
+.searchMenuHeader {
+	font: bold 10px Arial;
+	background-color:#bec0bf;	
+	color: #000000;
+	padding-left: 3px;
+	padding-top: 2px;	
+}
+.colHeading2 {
+	height:18px;
+	font: .95em Arial bold;
+	color: #000000;
+	text-align:left; 
+	background:url("../images/local/results_header_bg.jpg");
+	background-repeat:repeat-x;
+	border-left:1px solid #e4e4e4;
+	border-top:1px solid #e4e4e4;
+	border-bottom:0px solid #768ca5;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+.colHeading {
+	height:20px;
+	font: 11px Arial;
+	color: #FFFFFF;
+	text-align:left; 
+	background:url("../images/local/resultsColHeader.png");
+	background-repeat:repeat-x;
+	border-left:0px solid #768ca5;
+	border-top:1px solid #768ca5;
+	border-bottom:1px solid #768ca5;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+.colSpacer {
+	height:20px;
+	background:#5e7c95;
+	background-repeat:repeat-x;
+	border-left:1px solid #3a4f63;
+}
+
+.colFilter {
+	height:25px;
+	background:#dae2e8;
+	border-top:1px solid #000000;
+	border-bottom:1px solid #768ca5;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	font: 11px Arial;
+	color: #000000;
+	text-align:left; 
+}
+
+.colFilterSpacer {
+	height:25px;
+	background:#dae2e8;
+	border-left:1px solid #3a4f63;
+	border-top:1px solid #768ca5;	
+}
+.searchRowHighlight {
+	height:15px;
+	background:#aaf8aa;
+	border-top:0px solid #e4e4e4;
+	border-bottom:1px solid #e4e4e4;
+	border-left:1px solid #e4e4e4;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font: .90em Arial;
+	color: #000000;
+	text-align:left; 
+}
+.searchRowOdd2 {
+	height:15px;
+	background:#f3f4fa;
+	border-top:0px solid #e4e4e4;
+	border-bottom:1px solid #e4e4e4;
+	border-left:1px solid #e4e4e4;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font: .90em Arial;
+	color: #000000;
+	text-align:left; 
+}
+.searchRowOdd {
+	height:20px;
+	background:#dae2e8;
+	border-top:0px solid #768ca5;
+	border-bottom:1px solid #768ca5;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font: 11px Arial;
+	color: #000000;
+	text-align:left; 
+}
+
+.searchRowSpcrOdd {
+	height:20px;
+	background:#dae2e8;
+	border-left:1px solid #3a4f63;
+}
+.searchRowEven {
+	height:20px;
+	background:#ffffff;
+	border-top:0px solid #768ca5;
+	border-bottom:1px solid #768ca5;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font: 11px Arial;
+	color: #000000;
+	text-align:left; 
+}
+
+.searchRowEven2 {
+	height:18px;
+	background:#ffffff;
+	border-top:0px solid #768ca5;
+	border-bottom:1px solid #768ca5;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font: .90em Arial;
+	color: #000000;
+	text-align:left; 
+}
+
+.searchRowSpcrEven {
+	height:20px;
+	background:#ffffff;
+	border-left:1px solid #3a4f63;
+}
+.reportHeader {
+	font: bold .95em Arial;
+	color: #000000;
+	text-align:left; 
+	background:#87cefa;
+}
+.reportRow {
+	font: .90em Arial;
+	color: #000000;
+	text-align:left; 
+}
+
+
+#input {}
+.ddlSearch {
+	border:1px solid #898989;
+	border-radius:2px;
+	height: 17px;
+	background-color:#e0e9f6;
+	font: italic 10px Arial;
+	color: #7e93b0;
+}
+.select {
+	font: 1.10em Arial;
+	color : #000000;
+}
+.status {
+	font: .95em Arial;
+	color : #000000;
+}
+.filterTxt {
+	height: 15px;
+	border:1px solid #768ca5;
+	border-radius:0px;
+	height: 16px;
+	background-color:#ffffff;
+	font: 11px Arial;
+	color: #000000;
+}
+.textboxErr {
+	border:1px solid #d2071a;
+	background-color:#f9c131;
+	color: #444446;
+	padding-left: 2px;
+}
+.ddlErr {
+	border:1px solid #d2071a;
+	border-radius:0px;
+	background-color:#f9c131;
+	color: #3F1910;
+}
+.areaErr {
+	border:1px solid #d2071a;
+	border-radius:0px;
+	background-color:#f9c131;
+	color: #3F1910;
+}
+.fieldError {
+	font: bold italic 11px Arial;
+	color: #b71524;
+	text-align:left; 
+}
+.button {
+	background: url('../images/local/buttonBg.png');
+ 	height :20px;
+	width:110px;
+	border:1px solid #768ca5;
+	border-radius:3px;
+	font: 11px Arial;
+	color : #000000;
+	font-size : 11px; 
+}
+.imageButtonFilter{
+    background: url('../images/local/filter.png');
+ 	width : 20px;
+	height :20px;
+	border : none;
+	color : transparent;
+	font-size : 0em; 
+	vertical-align:top;
+}
+.imageButtonDelete{
+    background: url(../images/local/DeleteRed.png);
+ 	width : 18px;
+	height :18px;
+	border : none;
+	color : transparent;
+	font-size : 0em; 
+	vertical-align:top;
+}
+.imageButtonCwtReset{
+    background: url(../images/local/reset.gif);
+ 	width : 18px;
+	height :18px;
+	border : none;
+	color : transparent;
+	font-size : 0em; 
+	vertical-align:top;
+}
+.imageButtonEdit{
+    background: url(../images/local/Edit.gif);
+ 	width : 16px;
+	height :14px;
+	border : none;
+	color : transparent;
+	font-size : 0em; 
+	vertical-align:top;
+}
+.imageButtonSaveEdit{
+    background: url(../images/local/save.jpg);
+ 	width : 18px;
+	height :18px;
+	border : none;
+	color : transparent;
+	font-size : 0em; 
+	vertical-align:top;
+}
+.imageButtonUpload{
+    border : none;
+	color : transparent;
+	font-size : 0em; 
+	vertical-align:top;
+	color:#FFFFFF;
+	visibility:hidden;
+}
+.imageButtonSearch{
+    background: url('../images/local/search2.png');
+	width: 17px;
+	height: 17px;
+	border : none;
+	color : transparent;
+	font-size : 0em; 	
+}
+
+

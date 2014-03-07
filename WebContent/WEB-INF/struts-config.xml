@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config> 
+    <form-beans>
+        <form-bean name="loginForm" type="org.faithfarm.sms.struts.form.LoginForm"></form-bean>
+        <form-bean name="intakeForm" type="org.faithfarm.sms.struts.form.IntakeForm"></form-bean>
+        <form-bean name="cwtForm" type="org.faithfarm.sms.struts.form.CwtForm"></form-bean>
+        <form-bean name="reportForm" type="org.faithfarm.sms.struts.form.ReportForm"></form-bean>
+        <form-bean name="onlineAppForm" type="org.faithfarm.sms.struts.form.OnlineAppForm"></form-bean>
+        <form-bean name="cwtRoster" type="org.faithfarm.sms.struts.form.CwtRosterForm"></form-bean>
+    </form-beans>
+    
+    <global-exceptions>
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+        <forward name="error"  path="/Error.do"/>
+        <forward name="authenticate"  path="/pages/security/login.jsp"/>
+    </global-forwards>
+
+    <action-mappings>
+         
+         <action name="loginForm" path="/Login" type="org.faithfarm.sms.struts.action.LoginAction" scope="session" validate="true" input="/pages/security/index.jsp">
+                 <forward name="success" path="/pages/index.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/security/login_error.jsp" redirect="true"/>
+                 <forward name="login" path="/pages/security/index.jsp" redirect="true"/>
+                 <forward name="globallogin" path="http://apps.faithfarm.org/denied.jsp" redirect="true"/>
+                 <forward name="logout" path="/pages/security/index.jsp" redirect="true"/>
+                 <forward name="error" path="/error.jsp" redirect="true"/>               
+                 <forward name="manageusers" path="/pages/security/users.jsp" redirect="true"/>
+                 <forward name="createuser" path="/pages/security/create_user.jsp" redirect="true"/>
+                 <forward name="edituser" path="/pages/security/create_user.jsp" redirect="true"/>   
+                 <forward name="deleteuser" path="/pages/security/create_user.jsp" redirect="true"/>  
+                 <forward name="passwordreset" path="/pages/security/change_password.jsp" redirect="true"/>    
+                 <forward name="denied" path="/denied.html" redirect="true"/>            
+         </action>
+
+        <action name="onlineAppForm" path="/OnlineApp" type="org.faithfarm.sms.struts.action.OnlineAppAction" scope="session" input="/pages/onlineapp/index.jsp" 
+             validate="true">
+                 <forward name="success" path="/pages/onlineapp/confirmation.jsp" redirect="true"/>
+                 <forward name="personal" path="/pages/onlineapp/personal.jsp" redirect="true"/>
+                 <forward name="religious" path="/pages/onlineapp/religious.jsp" redirect="true"/>
+                 <forward name="substance" path="/pages/onlineapp/substance.jsp" redirect="true"/>
+                 <forward name="health" path="/pages/onlineapp/health.jsp" redirect="true"/>
+                 <forward name="legal" path="/pages/onlineapp/legal.jsp" redirect="true"/>
+                 <forward name="employment" path="/pages/onlineapp/employment.jsp" redirect="true"/>
+                 <forward name="process" path="/pages/onlineapp/process.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/onlineapp/index.jsp" redirect="true"/>
+                 <forward name="error" path="/pages/onlineapp/error.jsp" redirect="true"/>  
+                 <forward name="website" path="http://faithfarm.org" redirect="true"/>               
+         </action>
+
+         <action name="reportForm" path="/Report" type="org.faithfarm.sms.struts.action.ReportAction" scope="session" input="/pages/reports/index.jsp" >
+                 <forward name="success" path="/pages/reports/index.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/reports/index.jsp" redirect="true"/>
+                 <forward name="error" path="/pages/error.jsp" redirect="true"/>    
+                 <forward name="class_report" path="/pages/reports/class_list.jsp" redirect="true"/>
+                 <forward name="rotate" path="/pages/cwt/rosters/rotate.jsp" redirect="true"/> 
+                 <forward name="rotatesuccess" path="/pages/cwt/index.jsp" redirect="true"/>
+                 <forward name="fastfind" path="/pages/reports/fastfind.jsp" redirect="true"/>  
+                 <forward name="joblist_byn" path="/pages/reports/joblist_boynton.jsp" redirect="true"/>
+                 <forward name="joblist_ftl" path="/pages/reports/joblist_ftl.jsp" redirect="true"/>
+                 <forward name="joblist_oke" path="/pages/reports/joblist_oke.jsp" redirect="true"/>
+                 <forward name="login" path="/pages/security/index.jsp" redirect="true"/>
+         </action>
+       
+   
+         <action name="cwtForm" path="/Cwt" type="org.faithfarm.sms.struts.action.CwtAction" scope="session" >
+                 <forward name="success" path="/pages/cwt/index.jsp" redirect="true"/>
+                 <forward name="programs" path="/pages/cwt/programs/results.jsp" redirect="true"/>
+                 <forward name="metrics" path="/pages/cwt/metrics/results.jsp" redirect="true"/>
+                 <forward name="modules" path="/pages/cwt/modules/results.jsp" redirect="true"/>
+                 <forward name="sections" path="/pages/cwt/sections/results.jsp" redirect="true"/>
+                 <forward name="jobs" path="/pages/cwt/jobs/results.jsp" redirect="true"/>
+                 <forward name="supervisors" path="/pages/cwt/supervisors/results.jsp" redirect="true"/>
+                 <forward name="departments" path="/pages/cwt/departments/results.jsp" redirect="true"/>
+                 <forward name="create_job" path="/pages/cwt/jobs/create.jsp" redirect="true"/>
+                 <forward name="create_supervisor" path="/pages/cwt/supervisors/create.jsp" redirect="true"/>
+                 <forward name="create_department" path="/pages/cwt/departments/create.jsp" redirect="true"/>
+                 <forward name="create_programs" path="/pages/cwt/programs/create.jsp" redirect="true"/>
+                 <forward name="create_metrics" path="/pages/cwt/metrics/create.jsp" redirect="true"/>
+                 <forward name="create_modules" path="/pages/cwt/modules/create.jsp" redirect="true"/>
+                 <forward name="create_sections" path="/pages/cwt/sections/create.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/cwt/index.jsp" redirect="true"/>
+                 <forward name="error" path="/pages/error.jsp" redirect="true"/> 
+                 <forward name="rotate" path="/pages/cwt/rosters/rotate.jsp" redirect="true"/> 
+                 <forward name="login" path="/pages/security/index.jsp" redirect="true"/>      
+                 <forward name="rostersearch" path="/pages/cwt/rosters/search.jsp" redirect="true"/>   
+                 <forward name="rosterresults" path="/pages/cwt/rosters/results.jsp" redirect="true"/>  
+                 <forward name="createroster" path="/pages/cwt/rosters/create.jsp" redirect="true"/>  
+         </action>
+       
+         <action name="cwtRoster" path="/CwtRoster" type="org.faithfarm.sms.struts.action.CwtRosterAction" scope="session" >
+                 <forward name="success" path="/pages/cwt/rosters/index.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/cwt/rosters/index.jsp" redirect="true"/>
+                 <forward name="error" path="/pages/error.jsp" redirect="true"/>    
+                 <forward name="createroster" path="/pages/cwt/rosters/create.jsp" redirect="true"/>  
+                 <forward name="roster" path="/pages/cwt/rosters/index.jsp" redirect="true"/> 
+                 <forward name="login" path="/pages/security/index.jsp" redirect="true"/>
+                 <forward name="main" path="/pages/cwt/index.jsp" redirect="true"/>
+                 <forward name="viewroster" path="/pages/cwt/rosters/view.jsp" redirect="true"/>
+                 <forward name="rostersearch" path="/pages/cwt/rosters/search.jsp" redirect="true"/>  
+         </action>
+     
+         <action name="intakeForm" path="/Intake" type="org.faithfarm.sms.struts.action.IntakeAction" scope="session"  
+             validate="false">
+                 <forward name="success" path="/pages/index.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/index.jsp" redirect="true"/>
+                 <forward name="error" path="/pages/error.jsp" redirect="true"/> 
+                 <forward name="print" path="/pages/student/quick_print.jsp" redirect="true"/>
+                 <forward name="search" path="/pages/student/search.jsp" redirect="true"/>  
+                 <forward name="results" path="/pages/student/results.jsp" redirect="true"/>      
+                 <forward name="edit" path="/pages/student/personal.jsp" redirect="true"/>
+                 <forward name="home" path="/pages/index.jsp" redirect="true"/>  
+                 <forward name="personal" path="/pages/student/personal.jsp" redirect="true"/>     
+                 <forward name="religious" path="/pages/student/religious.jsp" redirect="true"/>     
+                 <forward name="substance" path="/pages/student/substance.jsp" redirect="true"/>     
+                 <forward name="health" path="/pages/student/health.jsp" redirect="true"/>     
+                 <forward name="legal" path="/pages/student/legal.jsp" redirect="true"/>     
+                 <forward name="employment" path="/pages/student/employment.jsp" redirect="true"/>
+                 <forward name="status" path="/pages/student/status.jsp" redirect="true"/>  
+                 <forward name="studentcwt" path="/pages/student/cwt.jsp" redirect="true"/>   
+                 <forward name="photo" path="/pages/student/photo.jsp" redirect="true"/> 
+                 <forward name="applications" path="/pages/applications/results.jsp" redirect="true"/> 
+                 <forward name="searchapps" path="/pages/applications/search.jsp" redirect="true"/>       
+                 <forward name="discipline" path="/pages/student/discipline.jsp" redirect="true"/>  
+                 <forward name="pass" path="/pages/student/pass.jsp" redirect="true"/>  
+                 <forward name="login" path="/pages/security/index.jsp" redirect="true"/>
+                 <forward name="cwt" path="/pages/student/cwt.jsp" redirect="true"/>
+         </action>
+           
+         <action name="intakeForm" path="/Image" type="org.faithfarm.sms.struts.action.ImageAction" scope="session"  
+             validate="false">
+                 <forward name="success" path="/pages/student/personal.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/student/personal.jsp" redirect="true"/>
+                 <forward name="error" path="/pages/error.jsp" redirect="true"/> 
+         </action>
+         
+         <action name="intakeForm" path="/pdfapp" type="org.faithfarm.sms.struts.action.PdfAppAction" scope="session"  
+             validate="false">
+                 <forward name="success" path="/pages/student/personal.jsp" redirect="true"/>
+                 <forward name="failure" path="/pages/student/personal.jsp" redirect="true"/>
+                 <forward name="error" path="/pages/error.jsp" redirect="true"/> 
+         </action>
+       
+    </action-mappings>
+    
+   
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/yada180/sms/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

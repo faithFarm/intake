@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 3, 2013 1:28:39 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.StudentDisciplineHistory" table="student_discipline_history" catalog="ffarm_prod">
+        <id name="studentDisciplineHistoryId" type="java.lang.Long">
+            <column name="student_discipline_history_id" />
+            <generator class="identity" />
+        </id>
+        <property name="intakeId" type="java.lang.Long">
+            <column name="intake_id" />
+        </property>
+        <property name="violationArea" type="string">
+            <column name="violation_area" length="50" />
+        </property>
+        <property name="violationType" type="string">
+            <column name="violation_type" length="50" />
+        </property>
+        <property name="violationDate" type="string">
+            <column name="violation_date" length="20" />
+        </property>
+        <property name="warnings" type="string">
+            <column name="warnings" length="20" />
+        </property>
+        <property name="fines" type="string">
+            <column name="fines" length="20" />
+        </property>
+        <property name="additionalConsquences" type="string">
+            <column name="additional_consquences" length="20" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="16777215" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" length="40" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="creation_date" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

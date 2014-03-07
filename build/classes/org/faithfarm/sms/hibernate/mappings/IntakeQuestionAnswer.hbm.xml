@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.IntakeQuestionAnswer" table="intake_question_answer" catalog="ffarm_prod">
+        <id name="intakeQuestionAnswerId" type="java.lang.Long">
+            <column name="INTAKE_QUESTION_ANSWER_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="questionId" type="long">
+            <column name="QUESTION_ID" not-null="true" />
+        </property>
+        <property name="answer" type="string">
+            <column name="ANSWER" length="3" />
+        </property>
+        <property name="intakeId" type="long">
+            <column name="INTAKE_ID" not-null="true" />
+        </property>
+        <property name="detail" type="string">
+            <column name="DETAIL" length="65" />
+        </property>
+        <property name="dates" type="string">
+            <column name="DATES" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

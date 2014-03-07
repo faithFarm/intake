@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.Donation" table="donation" catalog="ffarm_prod">
+        <id name="donationId" type="java.lang.Long">
+            <column name="DONATION_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="donorId" type="long">
+            <column name="DONOR_ID" not-null="true" />
+        </property>
+        <property name="confirmationNumber" type="string">
+            <column name="CONFIRMATION_NUMBER" length="45" />
+        </property>
+        <property name="dispatchDate" type="string">
+            <column name="DISPATCH_DATE" length="45" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="45" />
+        </property>
+        <property name="specialFlag" type="string">
+            <column name="SPECIAL_FLAG" length="45" />
+        </property>
+        <property name="callRequirements" type="string">
+            <column name="CALL_REQUIREMENTS" length="45" />
+        </property>
+        <property name="ac" type="string">
+            <column name="AC" length="45" />
+        </property>
+        <property name="bedding" type="string">
+            <column name="BEDDING" length="45" />
+        </property>
+        <property name="beddingQtyType" type="string">
+            <column name="BEDDING_QTY_TYPE" length="45" />
+        </property>
+        <property name="books" type="string">
+            <column name="BOOKS" length="45" />
+        </property>
+        <property name="booksQtyType" type="string">
+            <column name="BOOKS_QTY_TYPE" length="45" />
+        </property>
+        <property name="clothing" type="string">
+            <column name="CLOTHING" length="45" />
+        </property>
+        <property name="clothingQtyType" type="string">
+            <column name="CLOTHING_QTY_TYPE" length="45" />
+        </property>
+        <property name="computer" type="string">
+            <column name="COMPUTER" length="45" />
+        </property>
+        <property name="desk" type="string">
+            <column name="DESK" length="45" />
+        </property>
+        <property name="chest" type="string">
+            <column name="CHEST" length="45" />
+        </property>
+        <property name="armoire" type="string">
+            <column name="ARMOIRE" length="45" />
+        </property>
+        <property name="dresser" type="string">
+            <column name="DRESSER" length="45" />
+        </property>
+        <property name="mirror" type="string">
+            <column name="MIRROR" length="45" />
+        </property>
+        <property name="nightstand" type="string">
+            <column name="NIGHTSTAND" length="45" />
+        </property>
+        <property name="headboard" type="string">
+            <column name="HEADBOARD" length="45" />
+        </property>
+        <property name="footboard" type="string">
+            <column name="FOOTBOARD" length="45" />
+        </property>
+        <property name="rails" type="string">
+            <column name="RAILS" length="45" />
+        </property>
+        <property name="lamp" type="string">
+            <column name="LAMP" length="45" />
+        </property>
+        <property name="lawnFurniture" type="string">
+            <column name="LAWN_FURNITURE" length="45" />
+        </property>
+        <property name="mattress" type="string">
+            <column name="MATTRESS" length="45" />
+        </property>
+        <property name="mattressQtySize" type="string">
+            <column name="MATTRESS_QTY_SIZE" length="45" />
+        </property>
+        <property name="miscHouseholdItems" type="string">
+            <column name="MISC_HOUSEHOLD_ITEMS" length="45" />
+        </property>
+        <property name="refridgerator" type="string">
+            <column name="REFRIDGERATOR" length="45" />
+        </property>
+        <property name="stove" type="string">
+            <column name="STOVE" length="45" />
+        </property>
+        <property name="recliner" type="string">
+            <column name="RECLINER" length="45" />
+        </property>
+        <property name="sofa" type="string">
+            <column name="SOFA" length="45" />
+        </property>
+        <property name="loveseat" type="string">
+            <column name="LOVESEAT" length="45" />
+        </property>
+        <property name="wallUnit" type="string">
+            <column name="WALL_UNIT" length="45" />
+        </property>
+        <property name="tables" type="string">
+            <column name="TABLES" length="45" />
+        </property>
+        <property name="chair" type="string">
+            <column name="CHAIR" length="45" />
+        </property>
+        <property name="television" type="string">
+            <column name="TELEVISION" length="45" />
+        </property>
+        <property name="televisionSize" type="string">
+            <column name="TELEVISION_SIZE" length="45" />
+        </property>
+        <property name="electronics" type="string">
+            <column name="ELECTRONICS" length="45" />
+        </property>
+        <property name="washer" type="string">
+            <column name="WASHER" length="45" />
+        </property>
+        <property name="dryer" type="string">
+            <column name="DRYER" length="45" />
+        </property>
+        <property name="exerciseEquipment" type="string">
+            <column name="EXERCISE_EQUIPMENT" length="45" />
+        </property>
+        <property name="specialNotes" type="string">
+            <column name="SPECIAL_NOTES" length="16777215" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="CREATION_DATE" length="45" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="45" />
+        </property>
+        <property name="lastUpdatedDate" type="string">
+            <column name="LAST_UPDATED_DATE" length="45" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="45" />
+        </property>
+        <property name="farmBase" type="string">
+            <column name="FARM_BASE" length="45" not-null="true" />
+        </property>
+        <property name="tableType" type="string">
+            <column name="TABLE_TYPE" length="45" />
+        </property>
+        <property name="chairType" type="string">
+            <column name="CHAIR_TYPE" length="45" />
+        </property>
+        <property name="location" type="string">
+            <column name="LOCATION" length="45" />
+        </property>
+        <property name="bookcase" type="string">
+            <column name="BOOKCASE" length="45" />
+        </property>
+        <property name="ottoman" type="string">
+            <column name="OTTOMAN" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 23, 2013 2:58:32 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.ViewCwtIntake" table="v_cwt_intake" catalog="ffarm_prod">
+        
+        <id name="intakeId" type="java.lang.Long">
+            <column name="intake_id" />
+            <generator class="identity" />
+        </id>        
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <property name="program" type="string">
+            <column name="program_name" length="70" />
+        </property>
+        <property name="farm" type="string">
+            <column name="farm_base" length="50" />
+        </property>       
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,185 @@
+* { margin:0; padding:0 }
+div { margin:0; padding:0 }
+html { height:100.1% }
+
+#wrapper { width:950x; margin:0 auto;}
+
+a:hover { color:#558122; text-decoration:underline }
+a { color:#3A5A35; margin:0 }
+
+#header {background: url(images/local/header.gif) no-repeat; width:950px; height:164px; }
+
+#nav-bar {background: url(images/local/nav-bar.gif) no-repeat; width:198px; height:317px; float:left;}
+#main-image {background: url(images/local/main-image.jpg) no-repeat; width:760px; height:317px; float:right;}
+#left-box {background: url(images/local/left-side-box2a.gif) no-repeat; width:673px; height:770px; float:left;}
+#right-box {background: url(images/local/right-side-box2a.gif) no-repeat; width:285px; float:right;}
+
+.main-banner-section {background: url(images/local/main-banner-section.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section2 {background: url(images/local/main-banner-section2.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section3 {background: url(images/local/main-banner-section3.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section4 {background: url(images/local/main-banner-section4.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section5 {background: url(images/local/main-banner-section5.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section6 {background: url(images/local/main-banner-section6.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section7 {background: url(images/local/main-banner-section7.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section8 {background: url(images/local/main-banner-section8.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section9 {background: url(images/local/main-banner-section9.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section10 {background: url(images/local/main-banner-section10.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section11 {background: url(images/local/main-banner-section11.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-section12 {background: url(images/local/main-banner-section12.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-homepage {background: url(images/local/Home-Page-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-history {background: url(images/local/About-Us-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-unique {background: url(images/local/WhyWeAreUnique-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-programs {background: url(images/local/Programs-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-women {background: url(images/local/Womens-Ministry-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-news {background: url(images/local/News-And-Events-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-press {background: url(images/local/News-Releases-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-locations {background: url(images/local/Locations-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-sponsors {background: url(images/local/Corp-Sponsor-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-church {background: url(images/local/Church-Banner-2.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-contact {background: url(images/local/Contact-Us-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-shopping {background: url(images/local/Go-Shopping-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-store {background: url(images/local/On-Line-Store-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-ready {background: url(images/local/Message-Banner-2.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-cboard {background: url(images/local/Corporate-Board-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-cstaff {background: url(images/local/Corporate-Office-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-phope {background: url(images/local/Project-Hope-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-volunteer {background: url(images/local/Volunteer-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-upevents {background: url(images/local/Upcoming-Events-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-alumni {background: url(images/local/Alumni-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-thrift {background: url(images/local/Thrift-Store-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-newfurn {background: url(images/local/New-Furniture-Banner.jpg) no-repeat; width:958px; height:317px; float:left;}
+.main-banner-extended-training {background: url(images/local/Extended-Training.jpg) no-repeat; width:958px; height:317px; float:left;}
+
+a.toplinks:link{color:#FDDC37;  font-family:"Times New Roman", Times, serif; font-size:13px; text-decoration:none; }
+a.toplinks:visited{color:#FDDC37; font-family:"Times New Roman", Times, serif; font-size:13px; text-decoration:none;}
+a.toplinks:hover{color:#ffffff; font-family:"Times New Roman", Times, serif; font-size:13px; text-decoration:none; }
+
+a.droplinks:link{text-decoration:none; }
+a.droplinks:visited{text-decoration:none;}
+a.droplinks:hover{text-decoration:none; }
+
+a.mainlinks:link{color:#A00B28; text-decoration:underline; }
+a.mainlinks:visited{color:#A00B28; text-decoration:underline;}
+a.mainlinks:hover{color:#491B64; text-decoration:none; }
+
+.leftboxtext {color:#5D5959; margin-top:25px; margin-right:20px; margin-left:25px; font-size:110%;}
+
+.rightboxtext {width:189px;color:#5D5959;border-left:solid 5px #fff;border-right:solid 5px #fff;border-top:solid 9px #fff;border-bottom:solid 9px #fff; margin-right:auto; margin-left:auto;;font-size:110%;}
+
+.headline {color:#333333; font-size:120%; font-weight:bold;}
+
+.interior-mid
+{color:#6F6D6D;
+text-align:left;
+background-color:#ffffff;
+
+width:930px;
+font-weight:300;
+float:left;
+padding:20px;
+
+}
+
+.interior-text-mid
+{color:#636161;
+text-align:left;
+background-color:#F6F6F6;
+border:1px solid #A4A298;
+width:916px;
+font-size:110%;
+font-weight:300;
+float:left;
+padding:10px; 
+}
+
+.interior-headers
+{color:#ffffff;
+font-weight:bold;
+text-align:left;
+padding:2px;
+width:auto;
+background-color:#CA2342;
+border:1px solid #660C1D;
+}
+
+.image-outer {border:2px solid #6C5656; margin-right:8px; margin-bottom:2px;}
+.image-outer2 {border:2px solid #6C5656; margin-right:8px;}
+.image-outer3 {border:2px solid #fff; margin-right:8px; margin-bottom:2px;}
+
+.linespacer { border:1px solid #cccccc; background:#cccccc; width:625px; height:1px;}
+
+#player1 { 
+	float:left;
+	position:relative;
+	padding:5px;
+	z-index: -1000;
+	}
+#bannerLinks { 
+	float:right;
+	position:relative;
+	padding: 128px 0 0 0;
+	font-size: 1.0em; 
+	font-weight:bold;
+	}
+#bannerLinks a { 
+	color:#48690D;
+	background: url(images/local/arrow.gif) center left no-repeat; 
+	padding:0 10px 1px 15px; 
+	text-decoration:none}
+#bannerLinks a:hover { color:#82AA3A }
+	
+.lowbox {margin-left: 16px; color:#ffffff;}
+
+a.footerlinks:link{margin-left: 16px; text-decoration:none; }
+a.footerlinks:visited{margin-left: 16px; color:#ffffff; text-decoration:none;}
+a.footerlinks:hover{margin-left: 16px; color:#FDDC37; text-decoration:underline; }
+
+a.footerrightlinks:link{float:right; margin-right: 20px; color:#ffffff; text-decoration:none; }
+a.footerrightlinks:visited{float:right; margin-right: 20px; color:#ffffff; text-decoration:none;}
+a.footerrightlinks:hover{float:right; margin-right: 20px; color:#FDDC37; text-decoration:underline; }
+
+.intlowbox {background: url(images/local/int-footer1.gif) no-repeat; width:958px; height:34px; float:left;}
+
+a.intfooterlinks:link{float:right; margin-right: 20px; color:#ffffff; text-decoration:none; }
+a.intfooterlinks:visited{float:right; margin-right: 20px; color:#ffffff; text-decoration:none;}
+a.intfooterlinks:hover{float:right; margin-right: 20px; color:#FDDC37; text-decoration:underline; }
+
+.redtext {color:#CA2342;}
+
+.copyright{
+
+margin-top:125px;
+}
+
+
+.footerlinks{
+
+margin-top:286px;
+}
+
+.garland{padding-right:10px;}
+
+.contribution {
+font-size: 11px; color: #000066;display:block;width:530px;
+ }
+
+
+.jobs{
+color:#6F6D6D;
+text-align:left;
+background-color:#ffffff;
+clear:both;
+width:938px;
+font-weight:300;
+
+padding:10px;
+
+
+}
+
+.jobs ul{margin:20px;}
+
+.clear{
+
+clear:both;
+}

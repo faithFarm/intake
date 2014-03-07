@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.IntakeJobAssignment" table="intake_job_assignment" catalog="ffarm_prod">
+        <id name="intakeJobAssignmentId" type="long">
+            <column name="INTAKE_JOB_ASSIGNMENT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="jobAssignmentId" type="long">
+            <column name="JOB_ASSIGNMENT_ID" not-null="true" />
+        </property>
+        <property name="intakeId" type="long">
+            <column name="INTAKE_ID" not-null="true" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="CREATION_DATE" length="45" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

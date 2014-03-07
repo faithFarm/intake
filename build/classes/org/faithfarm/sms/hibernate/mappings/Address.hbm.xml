@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.Address" table="address" catalog="ffarm_prod">
+        <id name="addressId" type="java.lang.Long">
+            <column name="ADDRESS_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="donorId" type="java.lang.Long">
+            <column name="DONOR_ID" />
+        </property>
+        <property name="line1" type="string">
+            <column name="LINE1" length="100" not-null="true" />
+        </property>
+        <property name="line2" type="string">
+            <column name="LINE2" length="100" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="45" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" length="25" not-null="true" />
+        </property>
+        <property name="zipcode" type="string">
+            <column name="ZIPCODE" length="10" not-null="true" />
+        </property>
+        <property name="majorIntersection" type="string">
+            <column name="MAJOR_INTERSECTION" length="45" not-null="true" />
+        </property>
+        <property name="subdivision" type="string">
+            <column name="SUBDIVISION" length="45" />
+        </property>
+        <property name="streetSuffix" type="string">
+            <column name="STREET_SUFFIX" length="20" />
+        </property>
+        <property name="structureType" type="string">
+            <column name="STRUCTURE_TYPE" length="45" />
+        </property>
+        <property name="unit" type="string">
+            <column name="UNIT" length="10" />
+        </property>
+        <property name="building" type="string">
+            <column name="BUILDING" length="10" />
+        </property>
+        <property name="floor" type="string">
+            <column name="FLOOR" length="3" />
+        </property>
+        <property name="elevatorFlag" type="string">
+            <column name="ELEVATOR_FLAG" length="3" />
+        </property>
+        <property name="gatedFlag" type="string">
+            <column name="GATED_FLAG" length="3" />
+        </property>
+        <property name="gateInstructions" type="string">
+            <column name="GATE_INSTRUCTIONS" length="60" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="45" />
+        </property>
+        <property name="lastUpdatedBy" type="string">
+            <column name="LAST_UPDATED_BY" length="45" />
+        </property>
+        <property name="lastUpdatedDate" type="string">
+            <column name="LAST_UPDATED_DATE" length="45" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="CREATION_DATE" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

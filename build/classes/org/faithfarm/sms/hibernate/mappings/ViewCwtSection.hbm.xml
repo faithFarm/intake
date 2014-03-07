@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 23, 2013 2:58:32 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.ViewCwtSection" table="v_cwt_sections" catalog="ffarm_prod">
+        
+        <id name="sectionId" type="java.lang.Long">
+            <column name="module_offering_id" />
+            <generator class="identity" />
+        </id>        
+         <property name="programId" type="java.lang.Long">
+            <column name="program_id" />
+        </property>
+         <property name="moduleId" type="java.lang.Long">
+            <column name="module_id"  />
+        </property>        
+         <property name="moduleName" type="string">
+            <column name="module_name" length="50" />
+        </property>
+         <property name="moduleSeq" type="string">
+            <column name="module_sequence" length="20" />
+        </property>
+        <property name="meetingDays" type="string">
+            <column name="meeting_days" length="10" />
+        </property>
+        <property name="meetingTimes" type="string">
+            <column name="meeting_times" length="10" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="20" />
+        </property>
+        <property name="instructor" type="string">
+            <column name="instructor" length="60" />
+        </property>
+        <property name="farmBase" type="string">
+            <column name="farm_base" length="40" />
+        </property>
+       
+    </class>
+</hibernate-mapping>

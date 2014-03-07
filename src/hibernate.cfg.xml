@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://50.63.180.165:3306/ffarm_prod?autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">ffuserdb</property> 
+    <property name="hibernate.connection.password">Israel_33472</property>  
+    <property name="hibernate.c3p0.min_size">1</property>  
+  	<property name="hibernate.c3p0.max_size">200</property>
+  	<property name="hibernate.c3p0.timeout">0</property> 
+  	<property name="hibernate.connection.charSet">UTF-8</property>
+  	<property name="hibernate.c3p0.max_statements">0</property>
+  	<property name="hibernate.c3p0.idle_test_period">3000</property>  
+    <property name="hibernate.current_session_context_class">managed</property>
+    <property name="show_sql">false</property> 
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/SystemUser.hbm.xml"/> 
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/Intake.hbm.xml"/> 
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/State.hbm.xml"/> 
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/Question.hbm.xml"/> 
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/MedicalCondition.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/JobSkill.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/StudentHistory.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/StudentPassHistory.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/StudentDisciplineHistory.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/IntakeMedicalCondition.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/IntakeQuestionAnswer.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/IntakeJobSkill.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtSupervisor.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtJob.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtDepartment.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtJobMetric.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtMetrics.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtModuleSection.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtModuleStudent.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtModules.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtProgram.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtProgramMetric.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtProgramMetricModules.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtRoster.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CwtRosterNotes.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/CourseRotationHistory.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/UserAuthorizedSession.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/ViewCwtSection.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/ViewCwtRoster.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/ViewCwtIntake.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/IpPermission.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
