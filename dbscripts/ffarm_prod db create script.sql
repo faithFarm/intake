@@ -1,4 +1,4 @@
-CREATE TABLE `address` (
+CREATE TABLE `address` ( 
   `ADDRESS_ID` bigint(20) NOT NULL AUTO_INCREMENT,
   `DONOR_ID` bigint(20) DEFAULT NULL,
   `LINE1` varchar(100) NOT NULL,
