@@ -22,7 +22,7 @@ public class Test {
 		for (int i=0;i<list.size();i++) {
 			IpPermission obj = (IpPermission)list.get(i);
 			System.out.println(">"+obj.getIpAddress());
-		}
+		} 
 		
 	}
 }
