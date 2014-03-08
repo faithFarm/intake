@@ -23,6 +23,6 @@ public class Test {
 			IpPermission obj = (IpPermission)list.get(i);
 			System.out.println(">"+obj.getIpAddress());
 		} 
-		
+		 
 	}
 }
