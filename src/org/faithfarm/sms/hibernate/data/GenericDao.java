@@ -77,6 +77,35 @@ public class GenericDao {
 		return list;
 	}
 
+	public List listAllByFarm(Class c, String farm) {
+		Object obj = null;
+		Session session = null;
+		List list = new ArrayList();
+		try {
+			StringBuffer q = new StringBuffer("");
+			q.append("from " + c.getName());
+			q.append(" where farmBase = :farmBase order by currentClass, entryDate ");
+			session = HibernateFactory.openSession();
+			session.beginTransaction();
+			Query query = session.createQuery(q.toString());
+			query.setString("farmBase", farm);
+			list = query.list();
+			if (session.isOpen()) {
+				session.flush();
+				session.getTransaction().commit();
+			}
+		} catch (Exception e) {
+			if (session.isOpen())
+				session.getTransaction().rollback();
+			e.printStackTrace();
+			throw new HibernateException(e);
+		} finally {
+			if (session.isOpen())
+				session.close();
+		}
+		return list;
+	}
+
 
 	public Long save(Object obj) {
 		Long key = null;
@@ -1147,9 +1176,10 @@ public class GenericDao {
 		if (rosterDate!=null&&rosterDate.length()>0)
 			query.append(" and cwt_roster.roster_date= :rosterDate");
 		query.append(" and cwt_module_section.farm_base= :farmBase");
+		query.append (" and cwt_module_section.module_offering_id = cwt_roster.section_id");
 		if (userId!=null && !userId.equals(new Long(999)))
 			query.append(" and cwt_module_section.administrator_id= :userId");
-
+		
 		List list = null;
 		BigInteger retId = null;
 

@@ -1,12 +1,12 @@
 package org.faithfarm.sms.struts.form;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.apache.struts.action.ActionForm;
 import org.faithfarm.sms.domain.CwtMaster;
 import org.faithfarm.sms.domain.Intake;
+import org.faithfarm.sms.domain.ViewFastFind;
 
 public class ReportForm extends ActionForm {
 
@@ -36,6 +36,8 @@ public class ReportForm extends ActionForm {
 	private List<CwtMaster> class10CwtMasterList = new ArrayList<CwtMaster>();
 	private List<CwtMaster> class11CwtMasterList = new ArrayList<CwtMaster>();
 
+	private List<ViewFastFind> fastFindList = new ArrayList<ViewFastFind>();
+	
 	private String farmBase = "";
 	private String reportTitle = "";
 	private String runDate = "";
@@ -1314,6 +1316,14 @@ public class ReportForm extends ActionForm {
 
 	public void setEndPassDate(String endPassDate) {
 		this.endPassDate = endPassDate;
+	}
+
+	public List<ViewFastFind> getFastFindList() {
+		return fastFindList;
+	}
+
+	public void setFastFindList(List<ViewFastFind> fastFindList) {
+		this.fastFindList = fastFindList;
 	}
 
 	

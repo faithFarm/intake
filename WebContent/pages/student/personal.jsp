@@ -193,7 +193,7 @@ function mask(val){
                 <tr>
                 	<td>
                 			<logic:notEmpty name="intakeForm" property="intake.imageHeadshot">
-                		   		<img src="<%=request.getContextPath()%>/Image.do" style="height:auto; width:250px;/>
+                		   		<img src="<%=request.getContextPath()%>/Image.do" style="height:auto; width:250px;"/>
                 		    </logic:notEmpty>
                 	        <logic:empty name="intakeForm" property="intake.imageHeadshot">
                 	       		<img src="<%=request.getContextPath()%>/images/local/person.jpg" width="200" height="133"/>

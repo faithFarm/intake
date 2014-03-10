@@ -25,10 +25,12 @@ import org.faithfarm.sms.domain.CwtSupervisor;
 import org.faithfarm.sms.domain.Intake;
 import org.faithfarm.sms.domain.StudentHistory;
 import org.faithfarm.sms.domain.SystemUser;
+import org.faithfarm.sms.domain.ViewFastFind;
 import org.faithfarm.sms.hibernate.data.CourseRotationHistoryDao;
 import org.faithfarm.sms.hibernate.data.CwtJobDao;
 import org.faithfarm.sms.hibernate.data.CwtProgramDao;
 import org.faithfarm.sms.hibernate.data.CwtSupervisorDao;
+import org.faithfarm.sms.hibernate.data.GenericDao;
 import org.faithfarm.sms.hibernate.data.IntakeDao;
 import org.faithfarm.sms.hibernate.data.StudentHistoryDao;
 import org.faithfarm.sms.struts.form.ReportForm;
@@ -78,7 +80,7 @@ public class ReportAction extends Action {
 			
 			
 		 if ("FastFind".equals(action)||"FastFind".equals(reportForm.getAction())) {
-			 reportForm.setReportTitle("Class List");
+			 reportForm.setReportTitle("Fast Find List");
 			 if (reportForm.getFarmBase()==null||reportForm.getFarmBase().length()==0) {
 				 farm=user.getFarmBase();
 				 reportForm.setFarmBase(farm);
@@ -86,7 +88,8 @@ public class ReportAction extends Action {
 			 else
 				 farm = reportForm.getFarmBase();
 			 
-			 this.buildFastFindList(reportForm, farm);
+			 //this.buildFastFindList(reportForm, farm);
+			 this.buildNewFFList(reportForm, farm);
 			 reportForm.setAction("");
 			 reportForm.setFarmBase(farm);
 			 return mapping.findForward(Constants.FAST_FIND); 
@@ -547,8 +550,13 @@ public class ReportAction extends Action {
 		 reportForm.setClass0flag(flag0);
 	}
 	
-	
-	private void buildFastFindList (ReportForm reportForm, String farm) {
+	private void buildNewFFList (ReportForm reportForm, String farm) {
+		GenericDao dao = new GenericDao();
+		
+		List<ViewFastFind> list = dao.listAllByFarm(new ViewFastFind().getClass(), farm);
+		reportForm.setFastFindList(list);
+	}
+	private void OLDbuildFastFindList (ReportForm reportForm, String farm) {
 		
 		 IntakeDao intakeDao = new IntakeDao ();
 		 CwtSupervisorDao sDao = new CwtSupervisorDao();
@@ -557,6 +565,8 @@ public class ReportAction extends Action {
 		 CwtProgramDao cwtDao = new CwtProgramDao();
 		 CourseRotationHistoryDao historyDao = new CourseRotationHistoryDao();
 
+		 
+		 
 		 /*
 		  * Class 0
 		  * 

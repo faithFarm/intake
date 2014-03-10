@@ -105,7 +105,7 @@ td {}
     <th width="5" bgcolor="#000000"></th>
     <th width="14%" class="header">JIM BENTON</br></th>
     <th width="5" bgcolor="#000000"></th>
-    <th width="14%" class="header">JIM BENTON</br</th>
+    <th width="14%" class="header">JIM BENTON</br></th>
 </tr>
 <tr>
 	<td valign="top">
