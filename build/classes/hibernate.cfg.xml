@@ -45,7 +45,7 @@
     <mapping resource="org/faithfarm/sms/hibernate/mappings/ViewCwtSection.hbm.xml"/>
     <mapping resource="org/faithfarm/sms/hibernate/mappings/ViewCwtRoster.hbm.xml"/>
     <mapping resource="org/faithfarm/sms/hibernate/mappings/ViewCwtIntake.hbm.xml"/>
-     <mapping resource="org/faithfarm/sms/hibernate/mappings/ViewFastFind.hbm.xml"/>
+    <mapping resource="org/faithfarm/sms/hibernate/mappings/ViewFastFind.hbm.xml"/>
     <mapping resource="org/faithfarm/sms/hibernate/mappings/IpPermission.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
