@@ -54,16 +54,20 @@ public class LoginAction extends Action {
 					return mapping.findForward(Constants.ACCESS_DENIED);
 				}
 				*/
+		boolean access=false;
 		
-				GenericDao dao = new GenericDao();
-				boolean access=false;
-				List<IpPermission> list = dao.listAll(new IpPermission().getClass());
-				for (int i=0;i<list.size();i++) {
-					IpPermission obj = (IpPermission)list.get(i);
-					if (obj.getIpAddress().equals(ip))
-						access=true;
-						
-				}
+		if ("0:0:0:0:0:0:0:1".equals(ip))
+			access=true;
+		else {
+			GenericDao dao = new GenericDao();
+			List<IpPermission> list = dao.listAll(new IpPermission().getClass());
+			for (int i=0;i<list.size();i++) {
+				IpPermission obj = (IpPermission)list.get(i);
+				if (obj.getIpAddress().equals(ip)) 
+					access=true;
+					
+			}
+		}
 				
 				if (!access) {
 					LOGGER.log(Level.SEVERE,"INVALID IP ADDRESS TRIED TO ACCESS THE SYSTEM: "+request.getRemoteAddr().toString());
