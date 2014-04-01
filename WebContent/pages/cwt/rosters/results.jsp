@@ -30,7 +30,7 @@
             	   	  <b><bean:write name="loop1" property="moduleName" /> - Module <bean:write name="loop1" property="sequence" /></b><i>&nbsp;&nbsp;(&nbsp;&nbsp;<bean:write name="loop1" property="rosterDate" /> - <bean:write name="loop1" property="farmBase" />&nbsp;&nbsp;)</i>
             	   </a>
             	   <a  href="<%=request.getContextPath()%>/CwtRoster.do?action=Delete&type=Section&id=<bean:write name="loop1" property="sectionId" />&date=<bean:write name="loop1" property="rosterDate" />" style="text-decoration:none;" >
-            	   	 <img src="<%=request.getContextPath() %>/images/local/DeleteRed.png" />
+            	   	 <img src="<%=request.getContextPath() %>/images/local/DeleteRed.png" alt="Delete Roster" title="Delete Roster" />
             	   </a>
             
             		</br>   
