@@ -170,6 +170,14 @@ public class CwtRosterAction extends Action {
 				return mapping.findForward(Constants.VIEW_ROSTER);
 
 			}
+			else if ("Delete".equals(action)) {
+				session.setAttribute("error","");
+				String id = request.getParameter("id");
+				String rosterDate = request.getParameter("date");
+				GenericDao dao = new GenericDao();
+				dao.deleteRosterSQL(new Long(id), rosterDate);
+				return mapping.findForward(Constants.ROSTER_SEARCH);
+			}
 			else if ("Roster".equals(action)) {
 				session.setAttribute("error","");
 				cwtRosterForm.setRosterDate("");
