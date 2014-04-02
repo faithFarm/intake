@@ -51,6 +51,8 @@ public class PdfAppAction extends Action {
 				pdf.classListPdf(user, farm, response);
 			if ("waitlist".equals(action))
 				pdf.waitlistPdf(user, farm, response);
+			if ("omega".equals(action))
+				pdf.omegaPdf(response);
 			if ("occupancy".equals(action)) 
 				pdf.generateOccupancyReport(user, response);
 			if ("completion".equals(action)) 

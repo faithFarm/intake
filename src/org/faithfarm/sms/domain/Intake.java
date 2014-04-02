@@ -213,6 +213,7 @@ public class Intake implements java.io.Serializable {
 	private String gender;
 	private Long cwtProgramId;
 	private String arrivalDate;
+	private String graduationDate;
 	
 	public Intake() { 
 	}
@@ -296,7 +297,7 @@ public class Intake implements java.io.Serializable {
 			String employer3Job, String employer4Job, String employer4Name,
 			String ssFlag, String vaFlag, String wcFlag, String needGed, 
 			String spiritualExperience, String caseNotes, String responseStatus,
-			String emailAddress, String applicationSubmissionDate, String reapplyFlag, String gender, Long cwtProgramId, String arrivalDate ) {
+			String emailAddress, String applicationSubmissionDate, String reapplyFlag, String gender, Long cwtProgramId, String arrivalDate, String graduationDate ) {
 		this.intakeId = intakeId;
 		this.lastname = lastname;
 		this.firstname = firstname;
@@ -501,6 +502,7 @@ public class Intake implements java.io.Serializable {
 		this.gender=gender;
 		this.cwtProgramId=cwtProgramId;
 		this.arrivalDate=arrivalDate;
+		this.graduationDate=graduationDate;
 	}
 
 	public Long getIntakeId() {
@@ -2150,6 +2152,14 @@ public class Intake implements java.io.Serializable {
 
 	public void setEncryptedSsn(String encryptedSsn) {
 		this.encryptedSsn = encryptedSsn;
+	}
+
+	public String getGraduationDate() {
+		return graduationDate;
+	}
+
+	public void setGraduationDate(String graduationDate) {
+		this.graduationDate = graduationDate;
 	}
 	
 

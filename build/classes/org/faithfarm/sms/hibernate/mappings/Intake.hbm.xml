@@ -620,6 +620,9 @@
         <property name="arrivalDate" type="string">
             <column name="ARRIVAL_DATE" length="20" />
         </property>
+        <property name="graduationDate" type="string">
+            <column name="GRADUATION_DATE" length="20" />
+        </property>
         
     </class>
 </hibernate-mapping>

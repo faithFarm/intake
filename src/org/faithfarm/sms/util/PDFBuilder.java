@@ -44,7 +44,109 @@ import com.lowagie.text.pdf.PdfWriter;
 public class PDFBuilder {
 
 	
-	
+	public void omegaPdf(HttpServletResponse response) {
+		
+		GenericDao dao = new GenericDao();
+				
+		response.setContentType("application/pdf");
+		Document document = new Document();
+		try {
+			PdfWriter writer = PdfWriter.getInstance(document,
+					response.getOutputStream());
+			document.setMargins(10, 10, 10, 10);
+			document.open();
+			String currentDate = Validator.convertDate(new java.util.Date()
+					+ "");
+
+			// Create a table to server as a spacer
+			PdfPTable spacerTbl = new PdfPTable(1);
+			PdfPCell spacerCell = new PdfPCell(new Paragraph(""));
+			spacerCell.setColspan(1);
+			spacerTbl.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+			spacerCell.setBorder(Rectangle.NO_BORDER);
+			spacerCell.setFixedHeight(20);
+			spacerTbl.addCell(spacerCell);
+
+			Font cellFont = FontFactory.getFont(FontFactory.COURIER, 8);
+			Font headerFont = FontFactory.getFont(FontFactory.HELVETICA, 10);
+			Font titleFont = FontFactory.getFont(FontFactory.HELVETICA, 14);
+			Font dateFont = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 6);
+			Font colHeaderFont = FontFactory.getFont(
+					FontFactory.HELVETICA_BOLD, 8);
+			colHeaderFont.setStyle(Font.UNDERLINE);
+			headerFont.setStyle(Font.BOLD);
+
+			Image img = Image.getInstance(String.format(
+					"c:\\pdfFiles\\logo_wordpress_2.png", ""));
+			img.scaleToFit(150, 94);
+			document.add(new Chunk(img, 0, -90, true));
+
+			// spacer
+			document.add(spacerTbl);
+			document.add(spacerTbl);
+			document.add(spacerTbl);
+			document.add(spacerTbl);
+			document.add(spacerTbl);
+			document.add(spacerTbl);
+
+			String sTitle="";
+			sTitle="Fort Lauderdale Omega Report ";
+			Chunk titleChunk = new Chunk(sTitle);
+			titleFont.setStyle(Font.BOLD);
+			titleChunk.setFont(titleFont);
+			document.add(titleChunk);
+			document.add(spacerTbl);
+
+			Chunk dateChunk = new Chunk("Run on " + currentDate);
+			dateFont.setStyle(Font.ITALIC);
+			dateChunk.setFont(dateFont);
+			document.add(dateChunk);
+
+			// spacer
+			document.add(spacerTbl);
+
+			List class6List = dao.listOmega();
+			
+			PdfPTable table0 = new PdfPTable(3);
+			Font detailsFont = FontFactory.getFont(
+					FontFactory.COURIER, 8);
+			detailsFont.setStyle(Font.NORMAL);
+			PdfPCell cell0 = new PdfPCell(new Paragraph("column span 3"));
+			cell0.setColspan(3);
+			table0.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+			cell0.setBorder(Rectangle.NO_BORDER);
+			table0.setWidthPercentage(100);
+			table0.setHorizontalAlignment(Element.ALIGN_LEFT);
+
+			table0.addCell(new Phrase("STUDENT NAME", colHeaderFont));
+			table0.addCell(new Phrase("DOB", colHeaderFont));
+			table0.addCell(new Phrase("ENTRY DATE", colHeaderFont));
+						
+			for (int i=0;i<class6List.size();i++) {
+				Intake intake = (Intake)class6List.get(i);
+				
+				cell0.setColspan(5);
+				table0.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+				cell0.setBorder(Rectangle.NO_BORDER);
+				table0.setWidthPercentage(100);
+				table0.setHorizontalAlignment(Element.ALIGN_LEFT);
+
+				table0.addCell(new Phrase(intake.getFirstname()+" "+intake.getLastname(), detailsFont));
+				table0.addCell(new Phrase(intake.getDob(),detailsFont));
+				table0.addCell(new Phrase(intake.getEntryDate(), detailsFont));
+			}
+			
+			table0.addCell(new Phrase("TOTAL ENROLLED: "+class6List.size(), colHeaderFont));
+
+			document.add(table0);
+			document.close();
+
+		} catch (DocumentException e) {
+			e.printStackTrace();
+		} catch (IOException io) {
+			io.printStackTrace();
+		}
+	}
 	public void cwtGraduatePdf(String farm, HttpServletResponse response) {
 		
 		GenericDao dao = new GenericDao();

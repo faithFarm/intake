@@ -24,6 +24,7 @@
             		<li><a href="javascript:window.open('<%=request.getContextPath()%>/pdfapp.do?action=classlist&farm=Fort Lauderdale');">Fort Lauderdale</a></li>
             		<li><a href="javascript:window.open('<%=request.getContextPath()%>/pdfapp.do?action=classlist&farm=Okeechobee');">Okeechobee</a></li>
             		<li><a href="javascript:window.open('<%=request.getContextPath()%>/pdfapp.do?action=classlist&farm=Women\'s Home');">Women's Home</a></li>
+            		<li><a href="javascript:window.open('<%=request.getContextPath()%>/pdfapp.do?action=omega');">Omega</a></li>
             		<!-- 
             		<li><a href="<%=request.getContextPath()%>/Report.do?rpt=ClassList&farm=Boynton Beach">Boynton Beach</a></li>
             		<li><a href="<%=request.getContextPath()%>/Report.do?rpt=ClassList&farm=Fort Lauderdale">Fort Lauderdale</a></li>

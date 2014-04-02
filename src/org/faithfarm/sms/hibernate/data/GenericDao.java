@@ -1412,5 +1412,78 @@ public class GenericDao {
 	}
 	
 
+	public void deleteRosterSQL(Long sectionId, String rosterDate) {
+
+		List<Intake> list = new ArrayList<Intake>();
+		Transaction tx = null;
+		Session session = null;
+		
+		try {
+
+			session = HibernateFactory.openSession();
+			session.beginTransaction();
+
+			StringBuffer query = new StringBuffer(" delete from cwt_roster where 1=1 ");
+			query.append(" and section_id = :sectionId ");
+			query.append(" and roster_date = :rosterDate ");
+			SQLQuery q = session.createSQLQuery(query.toString());
+			q.setParameter("sectionId", sectionId);
+			q.setParameter("rosterDate", rosterDate);
+			//q.executeUpdate();
+			if (session.isOpen()) {
+				session.flush();
+				session.getTransaction().commit();
+			}
+		} catch (HibernateException e) {
+			if (session.isOpen())
+				session.getTransaction().rollback();
+			e.printStackTrace();
+			throw new HibernateException(e);
+		} finally {
+			if (session.isOpen())
+				session.close();
+		}
+	
+	}
+	
+	public List<Intake> listOmega() {
+
+		LOGGER.setLevel(Level.INFO);
+		List<Intake> list = new ArrayList<Intake>();
+		boolean match = false;
+		Session session = null;
+		try {
+			session = HibernateFactory.openSession();
+			session.beginTransaction();
+			StringBuffer query = new StringBuffer("from Intake "
+					+ " where class_ = :clsName "
+					+ " and intakeStatus in (:status)");
+			Query q = session.createQuery(query.toString());
+
+			q.setString("clsName", "Omega");
+			
+			List<String> statuses = new ArrayList<String>();
+			statuses.add("In Program");
+			statuses.add("Left Prop./Graduated to Omega");
+			q.setParameterList("status", statuses);
+						
+			list = q.list();
+			
+			if (session.isOpen()) {
+				session.flush();
+				session.getTransaction().commit();
+			}
+		} catch (Exception e) {
+			if (session.isOpen())
+				session.getTransaction().rollback();
+			e.printStackTrace();
+			throw new HibernateException(e);
+		} finally {
+			if (session.isOpen())
+				session.close();
+		}
+		return list;
+	}
+
 
 }

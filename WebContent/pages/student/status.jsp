@@ -93,6 +93,14 @@
             	</td>
             </tr>
             <tr>
+            	<td>Graduation Date</td>
+            </tr>
+            <tr>
+            	<td>
+            		<html:text property="intake.graduationDate" size="20" maxlength="12" styleClass="tcal"/>
+            	</td>
+            </tr>
+            <tr>
             	<td>Date Last Entered</td>
             </tr>
             <tr>
