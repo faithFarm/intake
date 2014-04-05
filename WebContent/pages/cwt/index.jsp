@@ -16,7 +16,7 @@
             </p>
             <ul style="color: Blue">
                 <li><a href="<%=request.getContextPath()%>/Cwt.do?action=programs">UBIT Skills</a></li>
-                <li><a href="<%=request.getContextPath()%>/Cwt.do?action=metrics">Skill Metrics</a></li>
+                <!-- <li><a href="<%=request.getContextPath()%>/Cwt.do?action=metrics">Skill Metrics</a></li> -->
                 <li><a href="<%=request.getContextPath()%>/Cwt.do?action=modules">Class Modules</a></li>
                 <li><a href="<%=request.getContextPath()%>/Cwt.do?action=sections">Module Sections</a></li>
                 <li><a href="<%=request.getContextPath()%>/Cwt.do?action=archives">Roster Search</a></li>
