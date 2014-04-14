@@ -311,7 +311,7 @@ public class IntakeAction extends Action {
 			} else if ("Transfer".equals(action)) {
 				String tfarm = request.getParameter("tfarm");
 				if ("OKE".equals(tfarm))
-					intakeForm.getIntake().setFarmBase("Okechobee");
+					intakeForm.getIntake().setFarmBase("Okeechobee");
 				if ("BYN".equals(tfarm))
 					intakeForm.getIntake().setFarmBase("Boynton Beach");
 				if ("FTL".equals(tfarm))
