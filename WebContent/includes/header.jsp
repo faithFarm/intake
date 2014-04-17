@@ -168,6 +168,7 @@
 	                    <td valign="center" width="25"> 	
                    			<a href="<%=request.getContextPath()%>/Login.do?action=PasswordReset" ><img src="<%=request.getContextPath() %>/images/local/icon_changePassword.png" style="width:20px;height:auto;" border="0" alt="Change Password" title="Change Password"></img></a>
 	                    </td>
+	                    
                     </tr>
                     </table>
                     </logic:notEmpty>
@@ -186,6 +187,7 @@
              <li><a href="<%=request.getContextPath()%>/Cwt.do">CWT</a></li>
              <li><a href="<%=request.getContextPath()%>/Report.do">Reports for Printing</a></li>
              <li><a href="<%=request.getContextPath()%>/Report.do?action=FastFind">Fast Find</a></li>
+             <li><a href="<%=request.getContextPath()%>/Intake.do?action=HelpDesk">Help Desk</a></li>
              <% if ("ffsuper".equals(user.getUsername())) { %>
              <li><a href="<%=request.getContextPath()%>/Login.do?action=ManageUsers">Manage Users</a></li> 
              <% } %>
@@ -202,10 +204,12 @@
        		<li><a href="<%=request.getContextPath()%>/Cwt.do">CWT</a></li>
        		<!-- <li><a href="<%=request.getContextPath()%>/Cwt.do">Reports</a></li> -->
        </logic:equal>
+       	                 
      </ul>
+       
 </div>
                      
-          
+        
             
             </div>
         </div>
