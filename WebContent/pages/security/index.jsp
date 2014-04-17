@@ -9,6 +9,7 @@
     <h2> 
         Log In
     </h2>
+    </br><img src="<%=request.getContextPath()%>/images/local/new-icon.png" style="width:30px; height:auto;"/><b><i>Now you can submit system requests via the Help Desk tab.</i></b>
     <!-- 
     <p>
     	<img src="<%=request.getContextPath()%>/images/local/message.png"/><b>System notices:</b>&nbsp;&nbsp;
@@ -25,7 +26,7 @@
 							<li><b><bean:write name="messages" property="property"/>&nbsp;<bean:write name="messages" property="message"/></b></li>
 						</logic:iterate>             
             </span>
-           
+     
 	<html:form action="/Login" focus="username">
 	<div onKeyPress="return checkSubmit(event)">
             <div class="accountInfo">
