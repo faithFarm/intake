@@ -9,6 +9,7 @@ import org.faithfarm.sms.domain.CwtModules;
 import org.faithfarm.sms.domain.CwtProgram;
 import org.faithfarm.sms.domain.CwtRoster;
 import org.faithfarm.sms.domain.ErrorMessage;
+import org.faithfarm.sms.domain.HelpDeskTicket;
 import org.faithfarm.sms.domain.Intake;
 import org.faithfarm.sms.domain.JobSkill;
 import org.faithfarm.sms.domain.MedicalCondition;
@@ -22,6 +23,7 @@ import org.faithfarm.sms.util.HtmlDropDownBuilder;
 public class IntakeForm extends ActionForm {
 
 	private Intake intake = new Intake();
+	private HelpDeskTicket ticket = new HelpDeskTicket();
 	private List<Intake> intakeList = new ArrayList<Intake>();
 	private List<Intake> applicantList = new ArrayList<Intake>();
 	private List<Question> healthQuestions = new ArrayList<Question>();
@@ -672,6 +674,12 @@ public class IntakeForm extends ActionForm {
 	}
 	public void setRosters(List<CwtRoster> rosters) {
 		this.rosters = rosters;
+	}
+	public HelpDeskTicket getTicket() {
+		return ticket;
+	}
+	public void setTicket(HelpDeskTicket ticket) {
+		this.ticket = ticket;
 	}
 	
 	

@@ -481,6 +481,22 @@ public class HtmlDropDownBuilder {
 			   additionalConsequences.add(new DropDownItem("See Comments","See Comments"));
 			   session.setAttribute("ddl_additionalConsequences", additionalConsequences);
 
+		        
+		        List<DropDownItem> issueType = new ArrayList<DropDownItem>();
+		        issueType.add(new DropDownItem("Bug/Defect","Bug/Defect"));
+		        issueType.add(new DropDownItem("Data Request","Data Request"));
+		        issueType.add(new DropDownItem("Enhancement Request","Enhancement Request"));
+		        issueType.add(new DropDownItem("General Request","General Request"));
+		        issueType.add(new DropDownItem("Performance Issue","Performance Issue"));
+		        session.setAttribute("ddl_issueType", issueType);
+
+		        List<DropDownItem> priority = new ArrayList<DropDownItem>();
+		        priority.add(new DropDownItem("Low","Low"));
+		        priority.add(new DropDownItem("Medium","Medium"));
+		        priority.add(new DropDownItem("High","High"));
+		        priority.add(new DropDownItem("Emergency","Emergency"));
+		        session.setAttribute("ddl_priority", priority);
+
 	 
 	}
 	

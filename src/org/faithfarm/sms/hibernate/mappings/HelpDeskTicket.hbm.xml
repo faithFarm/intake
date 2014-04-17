@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 16, 2013 10:14:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.faithfarm.sms.domain.HelpDeskTicket" table="helpdesk_ticket" catalog="ffarm_prod">
+        <id name="ticketId" type="java.lang.Long">
+            <column name="TICKET_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="issueType" type="string">
+            <column name="ISSUE_TYPE" length="40" not-null="true" />
+        </property>
+        <property name="priority" type="string">
+            <column name="PRIORITY" length="20" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="16777215" not-null="true" />
+        </property>
+        <property name="creationDate" type="string">
+            <column name="CREATION_DATE" length="20" not-null="true" />
+        </property>
+        <property name="farmBase" type="string">
+            <column name="FARM_BASE" length="45" not-null="true" />
+        </property>
+        <property name="systemUser" type="string">
+            <column name="system_user" length="60" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

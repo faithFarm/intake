@@ -37,6 +37,8 @@ import org.faithfarm.sms.domain.CwtMaster;
 import org.faithfarm.sms.domain.CwtModules;
 import org.faithfarm.sms.domain.CwtProgram;
 import org.faithfarm.sms.domain.CwtRoster;
+import org.faithfarm.sms.domain.ErrorMessage;
+import org.faithfarm.sms.domain.HelpDeskTicket;
 import org.faithfarm.sms.domain.Intake;
 import org.faithfarm.sms.domain.IntakeJobSkill;
 import org.faithfarm.sms.domain.IntakeMedicalCondition;
@@ -178,6 +180,45 @@ public class IntakeAction extends Action {
 				return mapping.findForward(Constants.DISCIPLINE);
 			} else if ("Photo".equals(action))
 				return mapping.findForward(Constants.PHOTO);
+			else if ("HelpDesk".equals(action)) {
+				intakeForm.setTicket(new HelpDeskTicket());
+				return mapping.findForward(Constants.TICKET);
+			}
+			else if ("Submit Ticket".equals(action)) {
+				List<ErrorMessage> messages = new ArrayList<ErrorMessage>();
+				boolean valid=true;
+				if (intakeForm.getTicket().getIssueType().length()==0)
+				 {
+					valid = false;
+					messages.add(new ErrorMessage("issue type is required", ""));
+					intakeForm.setMessageType("success");
+				}
+				if (intakeForm.getTicket().getPriority().length()==0)
+				 {
+					valid = false;
+					messages.add(new ErrorMessage("priority is required", ""));
+					intakeForm.setMessageType("success");
+				}
+				if (intakeForm.getTicket().getDescription().length()==0)
+				 {
+					valid = false;
+					messages.add(new ErrorMessage("issue summary is required", ""));
+					intakeForm.setMessageType("success");
+				}
+				
+				if (!valid) {
+					intakeForm.setMessages(messages);
+					intakeForm.setMessageType("error");
+				} else {
+					intakeForm.getTicket().setCreationDate(Validator.getEpoch()+"");
+					intakeForm.getTicket().setFarmBase(user.getFarmBase());
+					intakeForm.getTicket().setSystemUser(user.getFirstName()+" "+user.getLastName());
+					Long id = intakeDao.save(intakeForm.getTicket());
+					intakeForm.getTicket().setTicketId(id);
+					this.sendHelpDeskEmail(intakeForm.getTicket(), request);
+				}
+				return mapping.findForward(Constants.TICKET);
+			}
 			else if ("Search".equals(action)) {
 				intakeForm.setIntake(new Intake());
 				intakeForm.setGedFlag(null);
@@ -1279,6 +1320,58 @@ public class IntakeAction extends Action {
 		
 	}
 	
+	private void sendHelpDeskEmail (HelpDeskTicket ticket, HttpServletRequest request) {
+		Properties properties = new Properties();
+		properties.put("mail.smtp.auth", "true");
+		properties.put("mail.smtp.starttls.enable", "true");
+		properties.put("mail.smtp.host", "smtp.gmail.com");
+		properties.put("mail.smtp.port", "587");
+		
+		Session mailSession = Session.getDefaultInstance(properties,
+				new javax.mail.Authenticator() {
+					protected PasswordAuthentication getPasswordAuthentication() {
+						return new PasswordAuthentication("faithfarm.intake@gmail.com","It0525Ff");
+					}
+				});
+		try{
+	         // Create a default MimeMessage object.
+	         MimeMessage message = new MimeMessage(mailSession);
+
+	         // Set From: header field of the header.
+	         //message.setFrom(new InternetAddress("donnotreply@faithfarm.org"));
+
+	         // Set To: header field of the header.
+	         
+	         //temp for testing purposes
+	         //message.addRecipient(Message.RecipientType.TO,
+              //       new InternetAddress("itdepartment@faithfarm.org"));
+	         message.addRecipient(Message.RecipientType.TO,
+                     new InternetAddress("ricky.ratliff@outlook.com"));
+        	       
+	              
+	         // Set Subject: header field
+	         message.setSubject("Ticket #"+ticket.getTicketId()+" created for "+ticket.getFarmBase());
+	         // Now set the actual message
+	         message.setText("Ticket #"+ticket.getTicketId()+
+	        		 "\n\rSubmitted By:"+ticket.getSystemUser()+
+	        		 "\n\rSubmitted On:"+Validator.convertEpoch(new Long(ticket.getCreationDate()))+
+	        		 "\n\rFarm:"+ticket.getFarmBase()+
+	        		"\n\rType:"+ticket.getIssueType()+
+	        		 "\n\rPriority:"+ticket.getPriority()+
+	        		 "\n\rSummary:"+ticket.getDescription());
+
+	         // Send message
+	         if (!"127.0.0.1".equals(request.getRemoteAddr()))
+	        	 Transport.send(message);
+	         
+	       }catch (MessagingException mex) {
+	         mex.printStackTrace();
+	         LOGGER.log(Level.SEVERE,"Error occurred sending email for application: "+mex.getMessage());
+	      }
+		
+		
+		
+	}
 	private void uploadFile(IntakeForm intakeForm) {
 		FormFile file = intakeForm.getImageFile();
 		try {

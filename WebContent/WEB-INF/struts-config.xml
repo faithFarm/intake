@@ -133,6 +133,7 @@
                  <forward name="pass" path="/pages/student/pass.jsp" redirect="true"/>  
                  <forward name="login" path="/pages/security/index.jsp" redirect="true"/>
                  <forward name="cwt" path="/pages/student/cwt.jsp" redirect="true"/>
+                 <forward name="ticket" path="/pages/helpdesk/ticket.jsp" redirect="true"/>
          </action>
            
          <action name="intakeForm" path="/Image" type="org.faithfarm.sms.struts.action.ImageAction" scope="session"  
