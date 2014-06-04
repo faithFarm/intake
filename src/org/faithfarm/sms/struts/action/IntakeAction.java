@@ -1343,8 +1343,8 @@ public class IntakeAction extends Action {
 	         // Set To: header field of the header.
 	         
 	         //temp for testing purposes
-	         //message.addRecipient(Message.RecipientType.TO,
-              //       new InternetAddress("itdepartment@faithfarm.org"));
+	         message.addRecipient(Message.RecipientType.TO,
+                    new InternetAddress("itdepartment@faithfarm.org"));
 	         message.addRecipient(Message.RecipientType.TO,
                      new InternetAddress("ricky.ratliff@outlook.com"));
         	       

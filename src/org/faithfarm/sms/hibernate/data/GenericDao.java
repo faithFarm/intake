@@ -8,6 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.faithfarm.sms.domain.Intake;
+import org.faithfarm.sms.domain.StudentPassHistory;
 import org.faithfarm.sms.domain.SystemUser;
 import org.faithfarm.sms.domain.ViewCwtIntake;
 import org.hibernate.HibernateException;
@@ -958,6 +959,40 @@ public class GenericDao {
 		return user;
 	}
 
+	
+	public List searchPasses(String passDate1, String passDate2) {
+		Session session = null;
+		StringBuffer query = new StringBuffer("");
+				query.append(" select * from student_pass_history inner join intake ");
+				query.append(" on student_pass_history.intake_id=intake.intake_id where 1=1 ");
+		
+		if ( (passDate1 != null && passDate1.length() > 0) && (passDate2==null||passDate2.length()==0))
+			query.append(" and pass_date = :passDate1 ");
+		else if ( (passDate1 != null && passDate1.length() > 0) && (passDate2!=null||passDate2.length()>0))
+			query.append(" and pass_date between :passDate1 and :passDate2 ");
+
+		List list = null;
+		try {
+			session = HibernateFactory.openSession();
+			session.beginTransaction();
+			SQLQuery q = session.createSQLQuery(query.toString());
+			q.setParameter("passDate1", passDate1);
+			q.setParameter("passDate2", passDate2);
+			q.addEntity(StudentPassHistory.class);
+			list = q.list();
+			session.flush();
+			session.getTransaction().commit();
+		} catch (HibernateException e) {
+			session.getTransaction().rollback();
+			e.printStackTrace();
+			throw new HibernateException(e);
+		} finally {
+			session.close();
+		}
+		return list;
+	}
+	
+	
 	public List searchPass(String passDate1, String passDate2) {
 
 		StringBuffer query = new StringBuffer(

@@ -105,7 +105,7 @@ public class PDFBuilder {
 			// spacer
 			document.add(spacerTbl);
 
-			List class6List = dao.listOmega();
+			List<Intake> class6List = dao.listOmega();
 			
 			PdfPTable table0 = new PdfPTable(3);
 			Font detailsFont = FontFactory.getFont(

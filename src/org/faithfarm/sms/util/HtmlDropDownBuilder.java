@@ -284,6 +284,7 @@ public class HtmlDropDownBuilder {
 	        List<DropDownItem> passHours = new ArrayList<DropDownItem>();
 	        passHours.add(new DropDownItem("4","4"));
 	        passHours.add(new DropDownItem("7.5","7.5"));
+	        passHours.add(new DropDownItem("12","12"));
 	        passHours.add(new DropDownItem("ASAP","ASAP"));
 	       session.setAttribute("ddl_passHours", passHours);
 	
